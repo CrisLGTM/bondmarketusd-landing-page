@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eeefeb">
+  <title>BondMarket — A different way into bonds</title>
+  <meta name="description" content="Trade fractionalized bonds around the clock with USDC on Ethereum. A new way into the bond market.">
+  <link rel="stylesheet" href="styles.css?v=5">
+  <link rel="stylesheet" href="playground.css?v=5">
+</head>
+<body>
+  <main>
+    <div class="landing">
+      <section class="editorial" aria-labelledby="headline">
+        <header class="header">
+          <a class="wordmark" href="#" aria-label="BondMarket home"><span class="brand-symbol" aria-hidden="true"><i></i></span>Bond<span>Market</span></a>
+          <span class="edition">A NEW PERSPECTIVE ON BONDS</span>
+        </header>
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> BONDS, MEET STABLECOINS.</p>
+          <h1 id="headline">Trade bonds<br><em>by the slice.</em></h1>
+          <p class="intro">Buy and sell fractions of corporate bonds with USDC.<br class="desktop-break"> A smaller starting point. A market that stays open.</p>
+          <div class="actions">
+            <button class="primary" data-dialog="trade">Start trading <span aria-hidden="true">↗</span></button>
+            <button class="secondary" id="browse-markets">Browse markets <span aria-hidden="true">↗</span></button>
+          </div>
+          <dl class="trading-facts"><div><dt>Trading hours</dt><dd>24/7</dd></div><div><dt>Trade size</dt><dd>From less than $1</dd></div><div><dt>Pay with</dt><dd>USDC on Ethereum</dd></div><div><dt>First issuers</dt><dd>Alphabet, NVIDIA</dd></div></dl>
+          <details class="bond-explainer"><summary>New to bonds? Here’s the short version <span aria-hidden="true">+</span></summary><p>A bond is a loan to a company. Its <strong>coupon</strong> describes the stated interest payment; <strong>maturity</strong> is when repayment is due under its terms. Fractionalization makes smaller units available to trade.</p><p>Prices can rise or fall, and issuers can default. Your rights and payments depend on the product’s terms.</p></details>
+        </div>
+        <div class="panel-bottom"><span>FAMILIAR COMPANIES. A DIFFERENT WAY TO TRADE.</span></div>
+      </section>
+
+      <section class="visual" aria-label="Interactive abstract bond artwork">
+        <div class="visual-top"><div class="view-toggle" role="group" aria-label="Choose a view"><button type="button" id="artwork-view" aria-pressed="true" aria-controls="artwork-pane">Overview</button><button type="button" id="market-view" aria-pressed="false" aria-controls="market-viewer">Market viewer <span aria-hidden="true">↗</span></button></div><button class="soundless" id="motion-toggle" aria-pressed="false" aria-label="Pause animation">Ⅱ</button></div>
+        <div id="artwork-pane">
+        <div class="demo-orbit" aria-hidden="true"></div>
+        <div class="demo-instructions"><span class="status-dot"></span> TRY A SAMPLE ALLOCATION<p id="demo-instruction">Drag a USDC coin onto either bond.<br><span>Or tap a coin, then tap a bond. Move objects anywhere.</span></p><span class="demo-disclaimer">Illustrative demo · No real orders</span></div>
+        <div class="art-stage" id="art-stage" aria-label="Sample allocation playground">
+          <button type="button" class="art-object certificate alphabet-card" data-bond="alphabet" aria-label="Alphabet corporate bond. Select a coin, then activate to add a sample amount."><span class="certificate-edge"></span><span class="bond-top"><span>CORPORATE BOND</span><span>01 / GOOGL</span></span><span class="issuer-name">Alphabet Inc.</span><span class="certificate-terms"><span>Coupon<small>The stated interest</small></span><span>Maturity<small>The repayment date</small></span></span><span class="allocation-line"><span>Your sample</span><strong data-amount="alphabet">0.00 USDC</strong></span><span class="drop-label">ADD A SMALL STARTING POINT <span>↙</span></span></button>
+          <button type="button" class="art-object certificate nvidia-card" data-bond="nvidia" aria-label="NVIDIA corporate bond. Select a coin, then activate to add a sample amount."><span class="certificate-edge"></span><span class="bond-top"><span>CORPORATE BOND</span><span>02 / NVDA</span></span><span class="issuer-name">NVIDIA Corp.</span><span class="certificate-terms"><span>Coupon<small>The stated interest</small></span><span>Maturity<small>The repayment date</small></span></span><span class="allocation-line"><span>Your sample</span><strong data-amount="nvidia">0.00 USDC</strong></span><span class="drop-label">ADD A SMALL STARTING POINT <span>↙</span></span></button>
+          <button type="button" class="art-object demo-coin coin-half" data-cents="50" aria-pressed="false" aria-label="Select 0.50 USDC sample coin, or drag onto a bond"><span>0.50<small>USDC</small></span></button>
+          <button type="button" class="art-object demo-coin coin-one" data-cents="100" aria-pressed="false" aria-label="Select 1.00 USDC sample coin, or drag onto a bond"><span>1.00<small>USDC</small></span></button>
+          <button type="button" class="art-object demo-coin coin-five" data-cents="500" aria-pressed="false" aria-label="Select 5.00 USDC sample coin, or drag onto a bond"><span>5.00<small>USDC</small></span></button>
+        </div>
+        <div class="sample-basket" id="sample-basket" hidden><div class="basket-heading"><strong>Your sample basket</strong><button type="button" id="reset-demo">Reset ↺</button></div><dl><div><dt>Alphabet bond</dt><dd data-amount="alphabet">0.00 USDC</dd></div><div><dt>NVIDIA bond</dt><dd data-amount="nvidia">0.00 USDC</dd></div><div class="basket-total"><dt>Total sample allocation</dt><dd id="sample-total">0.00 USDC</dd></div></dl><p>A sample allocation, not a bond quantity, quote, or order.</p></div>
+        <div class="visual-bottom"><span class="drag-hint"><span aria-hidden="true">✥</span> A little change. A different perspective.</span><button class="bond-basics" id="reset-positions">Reset artwork ↺</button></div>
+        <p class="sr-only" id="demo-status" role="status" aria-live="polite"></p>
+        </div>
+        <div id="market-viewer" class="viewer-placeholder" role="region" aria-label="Market viewer" hidden><span class="viewer-icon" aria-hidden="true">↗</span><h2>Market viewer</h2></div>
+      </section>
+    </div>
+    <footer><span class="footer-brand">BondMarket <span> / bondmarket.app · Concept 05</span></span><span>Bonds carry risk. Prices can fall and issuers can default.</span><button data-dialog="about">About this preview ↗</button></footer>
+  </main>
+  <dialog id="preview-dialog" aria-labelledby="dialog-title"><button class="dialog-close" aria-label="Close dialog">×</button><span class="eyebrow">BONDMARKET / FIRST LOOK</span><h2 id="dialog-title"></h2><p id="dialog-copy"></p><button class="primary dialog-done">Back to exploring <span>↗</span></button></dialog>
+  <script src="script.js?v=5"></script>
+</body>
+</html>
