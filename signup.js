@@ -60,5 +60,5 @@ document.querySelector('#signup-back').addEventListener('click', () => {
 document.querySelector('#signup-again').addEventListener('click', () => {
   document.querySelector('#signup-content').hidden = false;
   document.querySelector('#signup-complete').hidden = true;
-  document.querySelector('#first-name').focus();
+  document.querySelector('#signup-email').focus();
 });

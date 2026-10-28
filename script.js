@@ -4,7 +4,7 @@ const content = {
   terms: ['Terms, before you trade.', 'The production Terms will appear here once supplied. This is a design placeholder, not a legal agreement. No account is created in this preview.'],
   privacy: ['Your privacy matters.', 'The production Privacy Notice will appear here once supplied. This prototype does not send or store form entries.'],
   how: ['Big bonds. Smaller pieces.', 'Companies issue bonds to borrow money. Fractionalization breaks a bond into smaller units, making smaller trades possible. A coupon is the bond’s stated interest payment; maturity is when repayment is due under its terms. Prices can fall, and issuers can default. The rights and payments attached to each product depend on its terms.'],
-  about: ['A first point of view.', 'Bond Swap is a retail bond trading concept, powered by BondTrader. This preview explores the layout, colors, motion, and action hierarchy. The artwork is illustrative; product details and destinations are still to be confirmed.']
+  about: ['A different kind of bond energy.', 'Bond Swap is a retail bond trading concept, powered by BondTrader. This separate DeFi concept explores a playful visual identity and a short sign-up flow. The artwork is illustrative; product details and destinations are still to be confirmed.']
 };
 document.querySelectorAll('[data-dialog]').forEach(button => button.addEventListener('click', () => {
   const [title, copy] = content[button.dataset.dialog];

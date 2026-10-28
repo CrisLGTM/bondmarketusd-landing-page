@@ -1,40 +1,46 @@
-# Bond Swap landing page
+# Bond Swap — DeFi concept
 
-Powered by BondTrader.
+An independent local repository cloned from the approved Bond Swap prototype at commit `1e82fd7ede4653513f9127893096776644e1b9b1`.
 
-An English-language retail landing page prototype for fractionalized bond trading with USDC on Ethereum.
+The approved source repository is unchanged. This clone has no origin remote, preventing accidental pushes to the approved design.
 
 ## Preview
 
-Open `index.html` directly, or run the optional local server with Node.js:
+Run `node server.cjs`, then visit http://127.0.0.1:4183/.
 
-```sh
-node server.cjs
-```
+Or open `index.html` directly. No installation or build step is needed. Google Fonts is optional; local font fallbacks are included.
 
-Then visit http://127.0.0.1:4173/.
+## Direction
 
-No installation or build step is required. Google Fonts uses an internet connection; system fonts provide a fallback.
+- Bold sans-serif typography, violet, lime, lavender, and pink.
+- Rounded corporate-bond tickets instead of formal certificates.
+- An always-visible sign-up card with two short steps.
+- Free dragging and coin-drop sample allocation, with tap and keyboard alternatives.
+- A Market viewer placeholder for the frontend team.
 
 ## Files
 
-- `index.html`: page content and accessible controls.
-- `styles.css`: base visual design.
-- `playground.css`: interactive allocation playground layout.
-- `script.js`: coin dragging, illustrative allocations, reset controls, dialogs, and view switching.
-- `signup.css` and `signup.js`: embedded sign-up preview, validation, and local completion state.
-- `server.cjs`: optional local static server.
+- `index.html` and `defi.css`: the new DeFi-oriented design.
+- `script.js`: dialogs, view switching, free dragging, and sample allocations.
+- `signup.js`: local-only form validation and completion.
+- `experience.js`: sign-up steps and navigation.
+- `server.cjs`: optional preview server on port 4183.
 
-## Prototype scope
+Legacy stylesheets are retained from the source clone but are not loaded by the new page.
 
-Drag USDC coins onto issuer cards, or select a coin and then a card. Allocations are samples, not executable trades, bond quantities, or market quotes. Reset artwork restores moved objects.
+## Prototype limitations
 
-The Market viewer is a placeholder for frontend integration. The sign-up prototype is always visible in the left-hand panel beneath a compact product introduction. The right panel switches independently between Playground and Market viewer, so visitors can explore while signing up. The form checks required fields, email format, password requirements, matching confirmation, and the confirmation checkbox. Optional referral and challenge codes are layout placeholders. All country options are shown without implying eligibility.
+No accounts, quotes, wallet connection, trades, or data integrations are live. Form data is not sent or stored. Use dummy entries. Demo USDC allocations do not calculate bond ownership, prices, or returns. Issuer tickers are references to the bond issuer, not listings of shares. Terms, Privacy Notice, and sign-in remain placeholders. Eligibility and product details require confirmation before production.
 
-Form submission is local only: entries are cleared and a preview completion state appears. No account is created. No form data is transmitted or stored by the application. Use dummy details when testing. Terms, Privacy Notice, and sign-in are placeholders. No wallet, live data feed, registration service, analytics, or financial transaction is connected.
+## Isolation
 
-Product structure, bond terms, eligibility, legal links, and onboarding destinations require confirmation before production use.
+Do not set this clone's origin to `CrisLGTM/bondmarketusd-landing-page`. A new GitHub repository is needed for this experiment.
 
-## Validation
+## Checks performed
 
-JavaScript syntax and simulated interaction checks have passed, including pointer-drop allocation, free movement, sample arithmetic, view switching, and reset. Rendered browser and mobile interaction verification remain outstanding.
+- Desktop rendering inspected in the in-app browser.
+- First sign-up step and back navigation tested with dummy details.
+- Tap-to-select coin allocation tested in the browser.
+- Simulated checks cover password mismatch blocking, both form steps, form clearing, retry, allocation totals, reset, and view switching.
+- All JavaScript files pass syntax checks.
+- Mobile breakpoints are implemented; mobile rendering still needs visual review.
