@@ -2,7 +2,7 @@
 
 An independent local repository cloned from the approved Bond Swap prototype at commit `1e82fd7ede4653513f9127893096776644e1b9b1`.
 
-The approved source repository is unchanged. This clone has no origin remote, preventing accidental pushes to the approved design.
+The approved design remains on `main` at `1e82fd7ede4653513f9127893096776644e1b9b1`. This independent checkout is for the experimental `codex/defi-concept` branch.
 
 ## Preview
 
@@ -12,7 +12,7 @@ Or open `index.html` directly. No installation or build step is needed. Google F
 
 ## Direction
 
-- Bold sans-serif typography, violet, lime, lavender, and pink.
+- Bold sans-serif typography, blue, lime, pale blue, and pink.
 - Rounded corporate-bond tickets instead of formal certificates.
 - An always-visible sign-up card with two short steps.
 - Free dragging and coin-drop sample allocation, with tap and keyboard alternatives.
@@ -34,7 +34,7 @@ No accounts, quotes, wallet connection, trades, or data integrations are live. F
 
 ## Isolation
 
-Do not set this clone's origin to `CrisLGTM/bondmarketusd-landing-page`. A new GitHub repository is needed for this experiment.
+The user requested the experiment be shared as a separate branch in `CrisLGTM/bondmarketusd-landing-page`. This checkout uses a `github` remote with its default push destination restricted to `codex/defi-concept`. Do not merge or push this design into `main` unless explicitly requested. The original checkout and preview port 4173 remain separate; this concept uses port 4183.
 
 ## Checks performed
 
@@ -44,3 +44,7 @@ Do not set this clone's origin to `CrisLGTM/bondmarketusd-landing-page`. A new G
 - Simulated checks cover password mismatch blocking, both form steps, form clearing, retry, allocation totals, reset, and view switching.
 - All JavaScript files pass syntax checks.
 - Mobile breakpoints are implemented; mobile rendering still needs visual review.
+
+## Content review update
+
+The DeFi concept now uses blue rather than purple, with BondTrader attribution retained. A native-HTML mini FAQ explains fractionalized corporate bonds, 24/7/weekend execution, USDC funding and small sizing, coupon schedules, spot/leverage/long/short/lending, and risks. Weekend execution and feature scope were confirmed by the user. Coupon and platform descriptions were informed by the supplied Partner Integration Overview and product-team Doc comments. The existing Terms and Privacy placeholders are unchanged. This is a source-code prototype; no website deployment is included.
