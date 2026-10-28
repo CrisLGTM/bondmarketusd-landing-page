@@ -1,8 +1,10 @@
 const dialog = document.querySelector('#preview-dialog');
 const content = {
-  trade: ['Your next move starts here.', 'This is the first design preview. The trading destination will be connected once the brand and onboarding journey are confirmed.'],
+  signin: ['Welcome back.', 'Sign-in will connect to the account service. This preview demonstrates the page layout only.'],
+  terms: ['Terms, before you trade.', 'The production Terms will appear here once supplied. This is a design placeholder, not a legal agreement. No account is created in this preview.'],
+  privacy: ['Your privacy matters.', 'The production Privacy Notice will appear here once supplied. This prototype does not send or store form entries.'],
   how: ['Big bonds. Smaller pieces.', 'Companies issue bonds to borrow money. Fractionalization breaks a bond into smaller units, making smaller trades possible. A coupon is the bond’s stated interest payment; maturity is when repayment is due under its terms. Prices can fall, and issuers can default. The rights and payments attached to each product depend on its terms.'],
-  about: ['A first point of view.', 'BondMarket is a retail trading concept for bondmarket.app. This preview explores the layout, colors, motion, and action hierarchy. The artwork is illustrative; product details and destinations are still to be confirmed.']
+  about: ['A first point of view.', 'Bond Swap is a retail bond trading concept, powered by BondTrader. This preview explores the layout, colors, motion, and action hierarchy. The artwork is illustrative; product details and destinations are still to be confirmed.']
 };
 document.querySelectorAll('[data-dialog]').forEach(button => button.addEventListener('click', () => {
   const [title, copy] = content[button.dataset.dialog];
@@ -12,7 +14,8 @@ document.querySelectorAll('[data-dialog]').forEach(button => button.addEventList
 }));
 const artworkView = document.querySelector('#artwork-view');
 const marketView = document.querySelector('#market-view');
-function setMarketView(showMarket) {
+function setPageView(view) {
+  const showMarket = view === 'market';
   document.querySelector('#artwork-pane').hidden = showMarket;
   document.querySelector('#market-viewer').hidden = !showMarket;
   document.querySelector('#motion-toggle').hidden = showMarket;
@@ -20,13 +23,9 @@ function setMarketView(showMarket) {
   marketView.setAttribute('aria-pressed', String(showMarket));
   document.querySelector('.visual').classList.toggle('showing-market', showMarket);
 }
-artworkView.addEventListener('click', () => setMarketView(false));
-marketView.addEventListener('click', () => setMarketView(true));
-document.querySelector('#browse-markets').addEventListener('click', () => {
-  setMarketView(true);
-  marketView.focus({ preventScroll: true });
-  document.querySelector('.visual').scrollIntoView({ behavior: 'instant', block: 'nearest' });
-});
+artworkView.addEventListener('click', () => setPageView('playground'));
+marketView.addEventListener('click', () => setPageView('market'));
+
 document.querySelectorAll('.dialog-close, .dialog-done').forEach(button => button.addEventListener('click', () => dialog.close()));
 dialog.addEventListener('click', event => { if (event.target === dialog && (event.clientX < dialog.getBoundingClientRect().left || event.clientX > dialog.getBoundingClientRect().right || event.clientY < dialog.getBoundingClientRect().top || event.clientY > dialog.getBoundingClientRect().bottom)) dialog.close(); });
 const visual = document.querySelector('.visual');

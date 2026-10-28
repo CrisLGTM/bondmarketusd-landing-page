@@ -4,35 +4,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#eeefeb">
-  <title>BondMarket — A different way into bonds</title>
+  <title>Bond Swap — Powered by BondTrader</title>
   <meta name="description" content="Trade fractionalized bonds around the clock with USDC on Ethereum. A new way into the bond market.">
-  <link rel="stylesheet" href="styles.css?v=5">
-  <link rel="stylesheet" href="playground.css?v=5">
+  <link rel="stylesheet" href="styles.css?v=9">
+  <link rel="stylesheet" href="playground.css?v=9">
+  <link rel="stylesheet" href="signup.css?v=9">
 </head>
 <body>
   <main>
-    <div class="landing">
+    <div class="landing signup-visible">
       <section class="editorial" aria-labelledby="headline">
         <header class="header">
-          <a class="wordmark" href="#" aria-label="BondMarket home"><span class="brand-symbol" aria-hidden="true"><i></i></span>Bond<span>Market</span></a>
-          <span class="edition">A NEW PERSPECTIVE ON BONDS</span>
+          <div class="brand-lockup"><a class="wordmark" href="#" aria-label="Bond Swap home"><span class="brand-symbol" aria-hidden="true"><i></i></span>Bond<span>&nbsp;Swap</span></a><a class="brand-attribution" href="https://bondtrader.io/">Powered by <strong>BondTrader</strong></a></div>
         </header>
-        <div class="hero-copy">
+        <div class="hero-copy" id="hero-intro">
           <p class="eyebrow"><span></span> BONDS, MEET STABLECOINS.</p>
-          <h1 id="headline">Trade bonds<br><em>by the slice.</em></h1>
-          <p class="intro">Buy and sell fractions of corporate bonds with USDC.<br class="desktop-break"> A smaller starting point. A market that stays open.</p>
-          <div class="actions">
-            <button class="primary" data-dialog="trade">Start trading <span aria-hidden="true">↗</span></button>
-            <button class="secondary" id="browse-markets">Browse markets <span aria-hidden="true">↗</span></button>
-          </div>
-          <dl class="trading-facts"><div><dt>Trading hours</dt><dd>24/7</dd></div><div><dt>Trade size</dt><dd>From less than $1</dd></div><div><dt>Pay with</dt><dd>USDC on Ethereum</dd></div><div><dt>First issuers</dt><dd>Alphabet, NVIDIA</dd></div></dl>
-          <details class="bond-explainer"><summary>New to bonds? Here’s the short version <span aria-hidden="true">+</span></summary><p>A bond is a loan to a company. Its <strong>coupon</strong> describes the stated interest payment; <strong>maturity</strong> is when repayment is due under its terms. Fractionalization makes smaller units available to trade.</p><p>Prices can rise or fall, and issuers can default. Your rights and payments depend on the product’s terms.</p></details>
+          <h1 id="headline" tabindex="-1">Trade bonds<br><em>by the slice.</em></h1>
+          <p class="intro">Fractionalized bonds from Alphabet and NVIDIA.<br>Trade 24/7 with USDC on Ethereum, starting below $1.</p>
         </div>
+        <section id="signup-panel" class="signup-panel" aria-labelledby="signup-title">
+          <div id="signup-content">
+            <div class="signup-heading"><h2 id="signup-title" tabindex="-1">Create your account.</h2></div>
+            <form id="signup-form" aria-describedby="signup-preview-note" onsubmit="return false">
+              <div class="form-row"><div class="form-field"><label for="first-name">First name</label><input id="first-name" name="given-name" autocomplete="given-name" placeholder="First name" maxlength="80" required></div><div class="form-field"><label for="last-name">Last name</label><input id="last-name" name="family-name" autocomplete="family-name" placeholder="Last name" maxlength="80" required></div></div>
+              <div class="form-field"><label for="signup-email">Email</label><input type="email" id="signup-email" name="email" autocomplete="email" placeholder="you@example.com" maxlength="254" required></div>
+              <div class="form-field"><label for="signup-country">Country of residence</label><select id="signup-country" name="country" autocomplete="country" required><option value="">Select your country</option></select></div>
+              <div class="form-field"><label for="signup-password">Password</label><div class="password-input"><input type="password" id="signup-password" name="new-password" autocomplete="new-password" placeholder="Create a password" minlength="8" maxlength="128" pattern="(?=.*[A-Za-z])(?=.*[0-9])(?=.*[^A-Za-z0-9]).{8,}" aria-describedby="password-hint" required><button type="button" class="password-toggle" data-password="signup-password" aria-controls="signup-password" aria-label="Show password" aria-pressed="false">Show</button></div><p id="password-hint" class="field-hint">8+ characters, including a letter, a number, and a symbol.</p></div>
+              <div class="form-field"><label for="confirm-password">Confirm password</label><div class="password-input"><input type="password" id="confirm-password" name="confirm-password" autocomplete="new-password" placeholder="Repeat your password" maxlength="128" aria-describedby="confirm-hint" required><button type="button" class="password-toggle" data-password="confirm-password" aria-controls="confirm-password" aria-label="Show confirmed password" aria-pressed="false">Show</button></div><p id="confirm-hint" class="field-hint" aria-live="polite"></p></div>
+              <details class="signup-options"><summary>Have a referral or challenge code? <span aria-hidden="true">+</span></summary><div class="form-row"><div class="form-field"><label for="referral-code">Referral code <span>(optional)</span></label><input id="referral-code" name="referral" placeholder="Referral code" maxlength="80" autocomplete="off"></div><div class="form-field"><label for="challenge-code">Challenge code <span>(optional)</span></label><input id="challenge-code" name="challenge" placeholder="Challenge code" maxlength="80" autocomplete="off"></div></div><p class="field-hint">Optional layout preview; codes are not connected.</p></details>
+              <label class="signup-consent" for="signup-consent"><input type="checkbox" id="signup-consent" required><span>I am 18 or older and have reviewed the <button type="button" class="signup-link" data-dialog="terms">Terms</button> and <button type="button" class="signup-link" data-dialog="privacy">Privacy Notice</button>.</span></label>
+              <button type="submit" class="signup-submit">Create account <span aria-hidden="true">↗</span></button>
+              <p id="signup-preview-note" class="signup-preview-note">Form preview only. No account is created; nothing you enter is sent or saved. Country options do not establish eligibility.</p>
+            </form>
+          </div>
+          <div class="signup-complete" id="signup-complete" hidden><span class="completion-mark" aria-hidden="true">✓</span><p class="signup-eyebrow">FORM PREVIEW COMPLETE</p><h2 tabindex="-1" id="complete-title">A small step.<br><em>A new perspective.</em></h2><p>This is where account verification would begin. No account has been created, and your form entries have been cleared.</p><button type="button" class="signup-submit" id="signup-back">Explore the playground <span aria-hidden="true">↗</span></button><button type="button" class="signup-link" id="signup-again">Try the form again</button></div>
+        </section>
         <div class="panel-bottom"><span>FAMILIAR COMPANIES. A DIFFERENT WAY TO TRADE.</span></div>
       </section>
 
       <section class="visual" aria-label="Interactive abstract bond artwork">
-        <div class="visual-top"><div class="view-toggle" role="group" aria-label="Choose a view"><button type="button" id="artwork-view" aria-pressed="true" aria-controls="artwork-pane">Overview</button><button type="button" id="market-view" aria-pressed="false" aria-controls="market-viewer">Market viewer <span aria-hidden="true">↗</span></button></div><button class="soundless" id="motion-toggle" aria-pressed="false" aria-label="Pause animation">Ⅱ</button></div>
+        <div class="visual-top"><div class="view-toggle" role="group" aria-label="Choose the right panel view"><button type="button" id="artwork-view" aria-pressed="true" aria-controls="artwork-pane">Playground</button><button type="button" id="market-view" aria-pressed="false" aria-controls="market-viewer">Market viewer <span aria-hidden="true">↗</span></button></div><button class="soundless" id="motion-toggle" aria-pressed="false" aria-label="Pause animation">Ⅱ</button></div>
         <div id="artwork-pane">
         <div class="demo-orbit" aria-hidden="true"></div>
         <div class="demo-instructions"><span class="status-dot"></span> TRY A SAMPLE ALLOCATION<p id="demo-instruction">Drag a USDC coin onto either bond.<br><span>Or tap a coin, then tap a bond. Move objects anywhere.</span></p><span class="demo-disclaimer">Illustrative demo · No real orders</span></div>
@@ -48,11 +59,13 @@
         <p class="sr-only" id="demo-status" role="status" aria-live="polite"></p>
         </div>
         <div id="market-viewer" class="viewer-placeholder" role="region" aria-label="Market viewer" hidden><span class="viewer-icon" aria-hidden="true">↗</span><h2>Market viewer</h2></div>
+
       </section>
     </div>
-    <footer><span class="footer-brand">BondMarket <span> / bondmarket.app · Concept 05</span></span><span>Bonds carry risk. Prices can fall and issuers can default.</span><button data-dialog="about">About this preview ↗</button></footer>
+    <footer><span class="footer-brand">Bond Swap <span> / Powered by BondTrader · Concept 09</span></span><span>Bonds carry risk. Prices can fall and issuers can default.</span><button data-dialog="about">About this preview ↗</button></footer>
   </main>
-  <dialog id="preview-dialog" aria-labelledby="dialog-title"><button class="dialog-close" aria-label="Close dialog">×</button><span class="eyebrow">BONDMARKET / FIRST LOOK</span><h2 id="dialog-title"></h2><p id="dialog-copy"></p><button class="primary dialog-done">Back to exploring <span>↗</span></button></dialog>
-  <script src="script.js?v=5"></script>
+  <dialog id="preview-dialog" aria-labelledby="dialog-title"><button class="dialog-close" aria-label="Close dialog">×</button><span class="eyebrow">BOND SWAP / FIRST LOOK</span><h2 id="dialog-title"></h2><p id="dialog-copy"></p><button class="primary dialog-done">Back to exploring <span>↗</span></button></dialog>
+  <script src="script.js?v=9"></script>
+  <script src="signup.js?v=9"></script>
 </body>
 </html>

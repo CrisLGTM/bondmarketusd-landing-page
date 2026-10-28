@@ -1,0 +1,99 @@
+/* Left panel: introduction or sign-up. Right panel: playground or market viewer. */
+.brand-lockup{display:flex;flex-direction:column;gap:7px}
+.brand-attribution{font-size:9px;letter-spacing:.2px;color:#68716d;margin-left:36px}
+.brand-attribution strong{font-weight:600;color:#445348}
+.brand-attribution:hover{color:var(--blue)}
+.header-signup{border:0;border-bottom:1px solid #c3cdbf;background:none;color:#485944;font-size:11px;padding:7px 0;white-space:nowrap}
+.header-signup:hover{color:var(--blue);border-color:var(--blue)}
+.landing.signup-visible{height:auto;min-height:calc(100svh - 70px)}
+.signup-visible .panel-bottom{display:none}
+.signup-panel{position:relative;padding:38px 0 15px;color:var(--ink);width:100%;max-width:470px;margin:auto 0}
+.signup-panel h2{font-family:var(--serif);font-size:52px;line-height:1.05;letter-spacing:-1px;font-weight:400;margin:0}
+.signup-panel h2 em{font-weight:400;color:var(--blue)}
+.signup-eyebrow{font-size:8px;letter-spacing:1.5px;color:#63735b;margin:0 0 16px}
+.signup-heading{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.signup-heading>p{font-size:9px;line-height:1.8;color:#687563;margin:0;text-align:right;flex-shrink:0}
+.signup-link{border:0;background:none;color:#3656bf;text-decoration:underline;text-underline-offset:3px;font-size:inherit;line-height:inherit;padding:0}
+.signup-link:hover{color:#1c3596}
+.signup-intro{font-size:11px;line-height:1.75;color:#687563;margin:13px 0 23px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form-field{margin-bottom:15px;min-width:0}
+.form-field>label{font-size:11px;font-weight:500;display:block;margin-bottom:7px}
+.form-field label>span{color:#718068;font-weight:400}
+.form-field input,.form-field select{width:100%;min-height:43px;border-radius:4px;border:1px solid #c6cfc1;background:#f9faf5;color:var(--ink);padding:10px 12px;font:12px var(--sans);outline-offset:3px}
+.form-field input::placeholder{color:#85917e}
+.form-field select{color-scheme:light}
+.form-field input:focus,.form-field select:focus{outline:2px solid #5475df}
+.form-field input[aria-invalid=true]{border-color:#b14235}
+.password-input{position:relative}
+.password-input input{padding-right:60px}
+.password-toggle{position:absolute;right:11px;top:0;height:43px;border:0;background:none;color:#657a5b;font-size:10px;padding:0 3px}
+.field-hint{color:#738168;font-size:9px;line-height:1.5;margin:6px 0 0}
+.field-hint:not(:empty){min-height:13px}
+.field-hint.is-error{color:#a73528}
+.signup-options{border-top:1px solid #d0d8ca;border-bottom:1px solid #d0d8ca;margin:3px 0 17px;padding:12px 0}
+.signup-options summary{font-size:10px;color:#64745b;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:10px}
+.signup-options summary::-webkit-details-marker{display:none}
+.signup-options summary span{font-size:15px}
+.signup-options[open] summary{margin-bottom:15px}
+.signup-options[open] summary span{transform:rotate(45deg)}
+.signup-options .form-field{margin-bottom:4px}
+.signup-options .field-hint{margin-bottom:3px}
+.signup-consent{display:flex;align-items:flex-start;gap:10px;font-size:10px;line-height:1.6;color:#63735a;margin-bottom:17px;cursor:pointer}
+.signup-consent>input{accent-color:var(--blue);flex-shrink:0;width:15px;height:15px;margin:1px 0 0}
+.signup-submit{width:100%;min-height:48px;background:var(--blue);border:1px solid var(--blue);border-radius:4px;color:white;font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:space-between;padding:0 18px;gap:20px}
+.signup-submit>span{font-size:21px;font-weight:400}
+.signup-submit:hover{background:#294bd2;border-color:#294bd2}
+.signup-preview-note{font-size:9px;line-height:1.65;color:#75846a;margin:12px 0 0;max-width:420px}
+.signup-visible .visual{min-height:850px}
+.signup-complete{padding:55px 0}
+.completion-mark{display:grid;place-items:center;width:45px;height:45px;border:1px solid #bbc8b2;border-radius:50%;font-size:22px;margin-bottom:30px;color:var(--blue)}
+.signup-complete>p:not(.signup-eyebrow){font-size:13px;line-height:1.8;color:#687563;margin:24px 0 30px;max-width:350px}
+.signup-complete>.signup-link{font-size:11px;margin-top:20px}
+.signup-panel h2:focus,#headline:focus{outline:none}
+@media(min-width:1600px){.signup-panel{max-width:520px}.signup-panel h2{font-size:60px}}
+@media(max-width:1100px){.signup-panel h2{font-size:44px}.signup-heading{gap:10px}.signup-heading>p{font-size:8px}.form-field>label{font-size:10px}.signup-intro{font-size:10px}}
+@media(max-width:760px){.signup-panel{max-width:none;padding:35px 0 16px}.signup-panel h2{font-size:48px}.signup-heading>p{font-size:9px}.signup-intro{font-size:11px}.form-field input,.form-field select{font-size:16px;min-height:46px}.form-field{margin-bottom:17px}.form-field>label{font-size:11px}.signup-options .form-row{grid-template-columns:1fr}.signup-options .form-field{margin-bottom:14px}.signup-consent{font-size:11px}.signup-visible .visual{min-height:760px}.signup-visible .visual.showing-market{min-height:540px}.signup-visible .visual.has-allocation{min-height:930px}.signup-complete{padding:25px 0}.header-signup{font-size:10px}}
+/* The introduction and sign-up are both visible on arrival. */
+.signup-visible .hero-copy{margin:0;padding:32px 0 0;max-width:470px}
+.signup-visible .hero-copy .eyebrow{font-size:8px;margin-bottom:13px}
+.signup-visible .hero-copy h1{font-size:58px;line-height:.98;letter-spacing:-1.5px;margin:0 0 13px}
+.signup-visible .hero-copy .intro{font-size:11px;line-height:1.75;margin:0;color:#64735c}
+.signup-visible .signup-panel{margin:0;padding:22px 0 14px}
+.signup-visible .signup-heading{margin-bottom:18px;padding-top:18px;border-top:1px solid #d0d8ca}
+.signup-visible .signup-heading h2{font-family:var(--sans);font-size:14px;letter-spacing:0;line-height:1.4;font-weight:550}
+@media(min-width:1600px){.signup-visible .hero-copy{max-width:520px}.signup-visible .hero-copy h1{font-size:64px}}
+@media(max-width:760px){.signup-visible .hero-copy{padding-top:30px;max-width:none}.signup-visible .hero-copy h1{font-size:54px}.signup-visible .hero-copy .intro{font-size:12px}.signup-visible .signup-panel{padding-top:20px}.signup-visible .signup-heading{margin-bottom:18px}}
+/* Concept 09: 40% registration, 60% playground; content fills the left column. */
+@media(min-width:761px){
+  .landing.signup-visible{display:grid;grid-template-columns:minmax(340px,2fr) minmax(0,3fr);align-items:stretch}
+  .signup-visible .editorial{padding:28px clamp(24px,3vw,48px) 24px;min-width:0}
+  .signup-visible .header,.signup-visible .hero-copy,.signup-visible .signup-panel{width:100%;max-width:none}
+  .signup-visible .hero-copy{padding-top:28px}
+  .signup-visible .hero-copy h1{font-size:clamp(48px,4.5vw,76px);margin-bottom:16px}
+  .signup-visible .hero-copy .intro{max-width:none;font-size:12px;line-height:1.75}
+  .signup-visible .signup-panel{padding-top:20px}
+  .signup-visible .signup-heading{margin-bottom:18px;padding-top:18px}
+  .signup-visible .visual{position:sticky;top:0;align-self:start;height:100svh;min-height:740px}
+  .signup-visible .form-field{margin-bottom:16px}
+  .signup-visible .signup-preview-note{max-width:none}
+  .signup-visible .alphabet-card{left:15%;top:25%}
+  .signup-visible .nvidia-card{left:50%;top:49%}
+  .signup-visible .coin-half{left:78%;top:22%}
+  .signup-visible .coin-one{left:13%;top:60%}
+  .signup-visible .coin-five{left:82%;top:79%}
+}
+@media(min-width:761px) and (max-width:1000px){
+  .signup-visible .editorial{padding-left:22px;padding-right:22px}
+  .signup-visible .hero-copy h1{font-size:49px}
+  .signup-visible .certificate{width:210px}
+  .signup-visible .alphabet-card{left:10%;top:25%}
+  .signup-visible .nvidia-card{left:35%;top:50%}
+  .signup-visible .coin-half{left:79%}
+}
+@media(max-width:760px){
+  .signup-visible .editorial{padding:24px 25px 20px}
+  .signup-visible .hero-copy{padding-top:26px}
+  .signup-visible .signup-panel{padding-top:18px}
+  .signup-visible .visual{position:relative;height:auto}
+}
