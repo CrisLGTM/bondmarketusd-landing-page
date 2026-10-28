@@ -16,10 +16,6 @@ document.querySelectorAll('[data-apply]').forEach(button => button.addEventListe
 }));
 document.querySelectorAll('.close-dialog, #dialog-done').forEach(button => button.addEventListener('click', () => modal.close()));
 modal.addEventListener('click', event => { if (event.target === modal) { const rect = modal.getBoundingClientRect(); if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) modal.close(); } });
-const volume = document.querySelector('#volume'), rate = document.querySelector('#rate'), output = document.querySelector('#commission');
-const money = new Intl.NumberFormat('en-US', {style:'currency',currency:'USD',maximumFractionDigits:2});
-function calculate() { const v=Number(volume.value), r=Number(rate.value); const valid=volume.value!=='' && rate.value!=='' && volume.validity.valid && rate.validity.valid && Number.isFinite(v) && Number.isFinite(r); output.textContent=valid?money.format(v/1000000*r):'—'; }
-volume.addEventListener('input',calculate); rate.addEventListener('input',calculate);
 const ideas = ['“Trading a company’s debt versus its shares.”','“My first corporate bond trade.”','“How interest-rate expectations move bond prices.”','“A bond trading challenge: what I learned.”'];
 let ideaIndex=0;
 document.querySelector('#next-idea').addEventListener('click',()=>{ideaIndex=(ideaIndex+1)%ideas.length;document.querySelector('#content-idea').textContent=ideas[ideaIndex];document.querySelector('#idea-status').textContent=ideas[ideaIndex];});
