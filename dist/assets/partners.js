@@ -7,6 +7,17 @@ const params = new URLSearchParams(location.search);
 for (const key of PARTNER_CONFIG.attributionKeys) { const value = params.get(key); if (value) attribution[key] = value.slice(0, 200); }
 try { sessionStorage.setItem(attributionKey, JSON.stringify(attribution)); } catch { /* The visit remains usable when storage is blocked. */ }
 const modal = document.querySelector('#application-dialog');
+
+// Frontend-only application until the existing user/partner registration API is supplied.
+// No database write, account creation, notifications, or portal redirect occurs here.
+const applicationForm = document.querySelector('#partner-application');
+const applicationStatus = document.querySelector('#application-status');
+applicationForm.addEventListener('submit', event => {
+  event.preventDefault();
+  if (!applicationForm.reportValidity()) return;
+  applicationStatus.textContent = 'Applications are not connected yet. Nothing has been submitted. Please keep this page open if you want to retain your entries.';
+});
+applicationForm.addEventListener('input', () => { applicationStatus.textContent = ''; });
 document.querySelectorAll('[data-apply]').forEach(button => button.addEventListener('click', () => {
   if (PARTNER_CONFIG.registrationUrl) {
     const target = new URL(PARTNER_CONFIG.registrationUrl, location.origin);

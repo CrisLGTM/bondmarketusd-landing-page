@@ -12,7 +12,11 @@ The hero uses a clipped view of the supplied illustration, with no added issuer 
 
 ## Integration before public launch
 
-- Set `PARTNER_CONFIG.registrationUrl` in `dist/assets/partners.js` to the approved partner portal registration URL. Currently Apply opens an honest preview notice and submits no information.
+- Become a partner links now scroll to an embedded application form. Email is required; full name and website/social profile are optional. The form validates locally, explicitly states that applications are not connected, and submits no information. Backend integration is deferred at the user's request.
+- Connect the existing registration/application API when supplied. Do not insert directly into a production partners table from browser code. Agree required fields, authentication, duplicate handling, consent, validation and response format with the backend team.
+- For users who both trade and partner, use the same authenticated user identity and link a pending partner application/profile to it. Approval and commission/program assignment must be controlled by the backend, not frontend-supplied flags.
+- Notifications and authenticated portal access are deferred; neither is implemented. Reuse the existing account/signup service rather than creating separate partner passwords.
+- `PARTNER_CONFIG.registrationUrl` remains unset; no portal URL or API endpoint is fabricated.
 - Align `attributionKeys` with the portal's actual parameter contract. The prototype preserves allowlisted parameters in session storage and forwards them once registration is configured. End-to-end attribution, consent/retention policy, portal activity and broker handoffs need integration verification.
 - Confirm the infographic copy and its links and terms before public rollout.
 - Confirm commission wording, available programs, platform names, product features, permitted territories and final legal/entity disclosures. No commission calculator or numerical earnings offer is included.

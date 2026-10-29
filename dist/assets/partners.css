@@ -4,3 +4,12 @@
 @media(max-width:760px){.header-inner .button-small{white-space:nowrap;flex-shrink:0;padding:10px 12px;font-size:10px;gap:12px}.header-inner .brand{flex-shrink:0}.hero h1{font-size:clamp(37px,9.7vw,62px)}.hero h1 br:first-child{display:initial}}
 
 .infographic-section{padding-bottom:45px}.resource-promoted{margin-top:0}.resource-promoted .resource-thumbnail{height:120px;width:90px}.resource-promoted .eyebrow{margin-bottom:8px}@media(max-width:760px){.infographic-section{padding-bottom:32px}.resource-promoted{padding:20px;gap:20px}.resource-promoted .resource-thumbnail{width:70px;height:100px}}
+
+/* Embedded partner application: frontend preview only until registration is connected. */
+.apply-layout{align-items:start}.application-context{font-size:12px!important;max-width:320px;margin-top:18px!important;color:var(--muted)}
+.partner-form{width:100%;max-width:460px;background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:28px;text-align:left;justify-self:end}
+.partner-form h3{font-size:25px;margin-bottom:10px}.partner-form .application-note{font-size:11px;line-height:1.7;color:var(--muted);margin:0 0 22px}
+.application-field{margin-bottom:18px}.application-field label{display:block;font-size:12px;font-weight:650;line-height:1.5;margin-bottom:7px}.application-field label>span{font-weight:400;color:var(--muted)}
+.application-field input{width:100%;min-height:47px;background:#fff;border:1px solid #bed2c9;color:var(--ink);border-radius:5px;padding:11px 13px;font-size:14px}.application-field input::placeholder{color:#8a9b95}
+.partner-form .button{width:100%;font-size:12px;gap:15px}.partner-form .application-status{font-size:11px;line-height:1.7;color:var(--muted);margin-top:13px}.application-status:empty{display:none}
+@media(max-width:760px){.partner-form{max-width:none;margin-top:28px;padding:23px}.application-field input{font-size:16px}.partner-form h3{font-size:25px}}
