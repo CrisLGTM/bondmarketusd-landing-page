@@ -1,0 +1,148 @@
+:root {
+  --paper: #f7f8f2;
+  --ink: #14213b;
+  --muted: #59657b;
+  --line: #dce2ec;
+  --accent: #2959e8;
+}
+.site-header { max-width: 1440px; padding: 25px 48px; border-bottom: 1px solid var(--line); gap: 24px; }
+.site-header .powered-by { display: block; white-space: nowrap; }
+.header-actions { display: flex; align-items: center; gap: 24px; font-size: 13px; }
+.header-actions button { background: none; border: 0; padding: 12px 0; }
+.account-link { background: var(--ink); color: white; padding: 13px 18px; border-radius: 7px; }
+.market-hero { max-width: 1280px; margin: auto; padding: 48px 48px 56px; display: grid; grid-template-columns: minmax(0,1.12fr) minmax(0,1fr); gap: 64px; align-items: center; }
+.market-copy { min-width: 0; }
+.market-copy .eyebrow { font-size: 10px; letter-spacing: 1.4px; margin-bottom: 26px; }
+.market-copy h1 { font-size: clamp(56px, 5.3vw, 76px); letter-spacing: -.065em; line-height: 1.04; }
+.market-intro { max-width: 440px; font-size: 17px; line-height: 1.65; color: var(--muted); margin: 24px 0 12px; }
+.hero-actions { display: flex; align-items: center; gap: 28px; font-size: 14px; }
+.primary-action { display: inline-flex; justify-content: space-between; gap: 34px; padding: 17px 21px; background: var(--lime); border: 1px solid #b9d974; border-radius: 7px; font-weight: 600; }
+.primary-action:hover { background: #c9ed66; }
+.text-action { padding: 14px 0; }
+.hero-facts { display: flex; gap: 32px; margin: 43px 0 0; }
+.hero-facts dt { font-size: 11px; color: var(--muted); margin-bottom: 9px; }
+.hero-facts dd { margin: 0; font: 500 17px var(--display); }
+.hero-risk { font-size: 11px; color: var(--muted); margin-top: 20px; }
+.signup-card { max-width: none; border-radius: 14px; box-shadow: none; padding: 28px; }
+.signup-heading h2 { font-size: 23px; }
+.visual { grid-column: 1; grid-row: 1; position: relative; top: 0; height: 690px; min-height: 690px; border-radius: 14px; overflow: hidden; }
+.art-object { animation: none; }
+.soundless { display: none; }
+.alphabet-card { transform: rotate(-3deg); }
+.nvidia-card { transform: rotate(3deg); left: 48%; }
+.floating-sticker, .connector { display: none; }
+.always-tag { transform: none; box-shadow: none; border-color: #bbd58a; }
+.ticket-bottom { font-size: 6px; letter-spacing: 0; }
+.form-field > label, .signup-consent { font-size: 11px; }
+.field-hint { font-size: 10px; }
+.bond-basics { max-width: 1440px; padding-left: 48px; padding-right: 48px; }
+.faq-answer p { color: var(--muted); font-size: 13px; }
+footer { max-width: 1440px; padding-left: 48px; padding-right: 48px; }
+.footer-line::after { content: ' / Powered by BondTrader'; }
+.brand-lockup { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; flex-shrink: 0; }
+.site-header .brand-lockup .powered-by { width: auto; max-width: none; margin: 0 0 0 38px; text-align: left; font-size: 9px; line-height: 1.4; }
+.brand-lockup .powered-by strong { display: inline; }
+.site-header > .header-actions { margin-left: 0; }
+.product-clarification { font-size: 13px; margin: 0 0 27px; }
+.market-hero .signup-card { width: 100%; min-width: 0; box-shadow: 0 5px 0 #e8ecdf; border-top: 4px solid var(--accent); }
+.market-hero fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+.market-hero .signup-progress { margin: 18px 0 12px; }
+.market-hero .signup-submit { min-height: 46px; }
+.playground-section { max-width: 1280px; margin: auto; padding: 32px 48px 0; border-top: 1px solid var(--line); scroll-margin-top: 24px; }
+.playground-heading { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-bottom: 25px; }
+.playground-heading h2 { font: 600 36px/1.15 var(--display); letter-spacing: -1.5px; margin: 0 0 12px; }
+.playground-heading p:not(.eyebrow) { font-size: 14px; line-height: 1.6; color: var(--muted); margin: 0; max-width: 540px; }
+.playground-heading > a { white-space: nowrap; color: var(--accent); font-size: 13px; border-bottom: 1px solid var(--accent); }
+.playground-section .visual { height: 520px; min-height: 520px; max-height: none; width: 100%; }
+.playground-section .certificate { width: 230px; height: 251px; top: 125px; }
+.playground-section .alphabet-card { left: 23%; }
+.playground-section .nvidia-card { left: 52%; }
+.playground-section .coin-half { top: 160px; left: 9%; }
+.playground-section .coin-one { top: 310px; left: 10%; }
+.playground-section .coin-five { top: 250px; left: 82%; }
+.playground-section .playground-caption { top: 28px; left: auto; right: 25px; }
+.playground-section .playground-ring { top: 17%; height: 63%; }
+.playground-section .demo-instructions { bottom: 38px; }
+.playground-section .sample-basket { left: auto; right: 25px; bottom: 35px; }
+.bond-basics { max-width: 1280px; padding-top: 38px; gap: 60px; }
+.basics-intro h2 { font-size: 36px; }
+.faq-list summary { padding: 16px 0; }
+.faq-answer p { line-height: 1.65; }
+@media (max-width: 1100px) {
+  .site-header { flex-wrap: wrap; gap: 18px; padding: 22px 30px; }
+  .site-header .powered-by { width: 100%; text-align: right; }
+  .market-hero { gap: 32px; padding: 32px 30px 45px; }
+  .market-copy h1 { font-size: 58px; }
+  .hero-facts { gap: 24px; }
+  .playground-section { padding-left: 30px; padding-right: 30px; }
+  .playground-section .alphabet-card { left: 20%; }
+  .playground-section .nvidia-card { left: 53%; }
+  .playground-section .certificate { width: 200px; height: 240px; }
+}
+@media (max-width: 850px) {
+  .site-header { padding: 18px 24px; gap: 12px; }
+  .site-header nav { order: 3; width: 100%; display: flex; gap: 24px; }
+  .site-header .powered-by { width: auto; margin-left: auto; }
+  .header-actions { margin-left: auto; gap: 15px; font-size: 12px; }
+  .market-hero { grid-template-columns: minmax(0,1fr); padding: 28px 24px 36px; max-width: 650px; gap: 28px; }
+  .market-copy h1 { font-size: 56px; }
+  .market-copy .eyebrow { margin-bottom: 18px; font-size: 9px; }
+  .market-intro { font-size: 16px; margin-top: 18px; }
+  .product-clarification { margin-bottom: 20px; }
+  .hero-facts { margin-top: 24px; gap: 32px; }
+  .hero-facts dt { margin-bottom: 6px; }
+  .hero-risk { margin-bottom: 0; }
+  .signup-card { padding: 24px; }
+  .form-field > label, .signup-consent { font-size: 12px; }
+  .playground-section { max-width: 650px; padding: 28px 24px 0; }
+  .playground-heading { align-items: start; flex-direction: column; gap: 10px; }
+  .playground-heading h2 { font-size: 30px; }
+  .playground-section .visual { height: 620px; min-height: 620px; }
+  .playground-section .playground-caption { top: 85px; left: 22px; right: 22px; }
+  .playground-section .certificate { top: 175px; width: calc(50% - 32px); height: 235px; transform: none; }
+  .playground-section .alphabet-card { left: 20px; }
+  .playground-section .nvidia-card { left: auto; right: 20px; }
+  .playground-section .coin-half, .playground-section .coin-one, .playground-section .coin-five { top: 440px; height: 54px; width: 54px; }
+  .playground-section .coin-half { left: 12%; }
+  .playground-section .coin-one { left: calc(50% - 27px); }
+  .playground-section .coin-five { left: auto; right: 12%; }
+  .playground-section .sample-basket { width: calc(100% - 40px); right: 20px; bottom: 30px; }
+  .playground-section .has-allocation { height: 720px; min-height: 720px; }
+  .bond-basics { padding: 32px 24px 20px; gap: 24px; }
+  .basics-intro h2 span { display: block; }
+}
+@media (max-width: 520px) {
+  .site-header { padding: 18px; }
+  .wordmark { font-size: 25px; }
+  .brand-symbol { width: 24px; height: 24px; }
+  .site-header .brand-lockup .powered-by { margin-left: 33px; font-size: 8px; }
+  .site-header .powered-by { order: 4; font-size: 9px; max-width: none; }
+  .powered-by strong { display: inline; }
+  .account-link { padding: 11px; }
+  .header-actions { gap: 12px; font-size: 11px; }
+  .market-hero { padding: 22px 18px 32px; }
+  .market-copy h1 { font-size: 51px; }
+  .hero-actions { gap: 22px; font-size: 13px; }
+  .hero-facts { gap: 25px; }
+  .hero-facts dd { font-size: 16px; }
+  .signup-card { padding: 21px; }
+  .playground-section { padding-left: 18px; padding-right: 18px; }
+}
+@media (max-width: 520px) {
+  .visual { height: 620px; min-height: 620px; }
+  .certificate { width: calc(50% - 24px); height: 225px; padding: 16px 12px; top: 175px; transform: none; box-shadow: 3px 4px 0 var(--ink); }
+  .alphabet-card { left: 16px; }
+  .nvidia-card { left: auto; right: 16px; }
+  .ticket-top { gap: 5px; font-size: 5px; }
+  .ticket-arrow { font-size: 18px; }
+  .ticker { font-size: 28px; letter-spacing: -1px; }
+  .ticket-divider { margin-left: -12px; margin-right: -12px; }
+  .allocation-line { display: block; }
+  .allocation-line strong { display: block; margin-top: 5px; }
+  .ticket-bottom { display: none; }
+  .coin-half, .coin-one, .coin-five { top: 425px; width: 54px; height: 54px; }
+  .coin-half { left: 12%; }
+  .coin-one { left: calc(50% - 27px); }
+  .coin-five { left: auto; right: 12%; }
+  .demo-instructions { bottom: 48px; }
+}

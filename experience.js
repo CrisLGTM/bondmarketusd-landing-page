@@ -23,9 +23,19 @@ accountStep.addEventListener('keydown', event => {
   if (event.key === 'Enter' && event.target.tagName === 'INPUT') { event.preventDefault(); nextButton.click(); }
 });
 document.querySelector('#signup-again').addEventListener('click', () => setSignupStep(1));
-document.querySelector('#nav-markets').addEventListener('click', () => {
+// Account links return to step one without clearing any entered details.
+document.querySelectorAll('a[href="#signup-panel"]').forEach(link => link.addEventListener('click', event => {
+  event.preventDefault();
+  document.querySelector('#signup-content').hidden = false;
+  document.querySelector('#signup-complete').hidden = true;
+  setSignupStep(1, false);
+  document.querySelector('#signup-panel').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'start' });
+  document.querySelector('#signup-email').focus({ preventScroll: true });
+}));
+document.querySelectorAll('[data-view-markets]').forEach(link => link.addEventListener('click', event => {
+  event.preventDefault();
   setPageView('market');
-  document.querySelector('.visual').scrollIntoView({ behavior: 'instant', block: 'nearest' });
+  document.querySelector('.visual').scrollIntoView({ block: 'start' });
   document.querySelector('#market-view').focus({ preventScroll: true });
-});
+}));
 setSignupStep(1, false);

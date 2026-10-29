@@ -6,6 +6,16 @@ The approved design remains on `main` at `1e82fd7ede4653513f9127893096776644e1b9
 
 ## Preview
 
+The signup-first revision places the existing two-step account preview in the hero, followed by the sample allocation playground and a compact FAQ. The oversized sample market table and three-column explainer have been removed. View markets opens the retained market-viewer placeholder.
+
+Current local preview: http://127.0.0.1:4185/ (`$env:PORT='4185'; node server.cjs`). Nothing has been pushed, merged or published.
+
+Validation: desktop and mobile widths (320, 390, 768, 1024 and 1440px), both signup steps and required fields, password confirmation, consent, referral preservation, CTA focus, preview completion, tap/drag allocation, reset, FAQ, market navigation and reduced-motion CTA behavior passed in Chrome. Desktop/mobile screenshots are included locally. Registration remains a frontend preview with no storage or account service.
+
+The marketplace revision adds an issuer preview with explicitly fictional sample terms, bond-detail dialogs, a three-step explainer, and a secondary allocation/account section. Its responsive styling is in `marketplace.css`.
+
+For comparison with an existing server on 4183, the current review session serves this checkout at http://127.0.0.1:4184/. The command below still uses the default port.
+
 Run `node server.cjs`, then visit http://127.0.0.1:4183/.
 
 Or open `index.html` directly. No installation or build step is needed. Google Fonts is optional; local font fallbacks are included.
