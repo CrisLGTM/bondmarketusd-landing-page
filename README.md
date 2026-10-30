@@ -6,13 +6,27 @@ Standalone, buildless frontend handoff. Start `node server.cjs` in this folder a
 
 ## Design and content
 
-English partner recruitment page based on the supplied infographic, the 20 October Google Doc and all three tabs of “DORA Partner Explainer — Draft 2”. Public branding uses BondTrader per the conversation. There is one primary application CTA. The challenge is supporting content, not a competing signup destination. The infographic is featured directly below the hero and is available to view or download. Public draft labels and the earnings/calculator section have been removed.
+English partner recruitment page based on the supplied infographic, the 20 October Google Doc and all three tabs of “DORA Partner Explainer — Draft 2”. Public branding uses BondTrader per the conversation. There is one primary application CTA. The challenge is supporting content, not a competing signup destination. The infographic sits in the content-ideas section and is available to view or download. Public draft labels and the earnings/calculator section have been removed.
 
 The hero uses a clipped view of the supplied illustration, with no added issuer logos. Market size is sourced to SIFMA 2026 ($160.7tn fixed-income securities outstanding at end-2025); this is broader-market context, not product inventory or daily volume. Unverified daily turnover, retail participation and historical comparisons are excluded. Government bonds are not advertised as live. Confirm all route-dependent features before public launch.
 
+## 30 October partner-brief revision (local review)
+
+Preserves the existing Manrope / DM Sans typography, mint / teal palette, hero illustration and onboarding steps. Order: hero, partner benefits, product comparison with sourced market statistic, trading-venue diagram, partner types / channels / rotating content ideas / infographic, programmes, unchanged onboarding, ten FAQs, email-first application and footer.
+
+- The infographic now belongs to the content-ideas section, rather than the space directly after the hero.
+- Challenge CTA uses the current link observed on bondtrader.io: https://app.bondtrader.io/challenge and opens a new tab.
+- BondSwap and Navion use text access badges (Web3 / wallet and MT5). Venue identification is typographic pending approved logo assets. BLKBOX's DORA platform badge is intentionally omitted until its implementation is confirmed.
+- No-deposit bonus is stored in an inert HTML template; it does not render or appear in the accessibility tree. Keep it inactive until qualifying requirements, geographical restrictions, terms and destination are approved. No separate cash prize is advertised.
+- An unconfirmed 2027 venue-expansion promise is omitted. The growing-network wording from the supplied brief remains.
+- Eligibility copy follows the supplied brief: US, UK, Canada, China, Iran and applicable OFAC sanctions restrictions. Brent must approve the complete list and final text before release. No country selector exists on this partner application; other pages' country lists were not changed.
+- Page has no mockup / placeholder / review-note labels. Application is still frontend-only. Submit prevents a network request and reports that online applications are unavailable and no details were submitted; it never reports success.
+- General partner privacy, agreement and legal-entity URLs are still required. Observed challenge-specific policies are not substituted for partner legal documents.
+- Review locally before any source push or public deployment.
+
 ## Integration before public launch
 
-- Become a partner links now scroll to an embedded application form. Email is required; full name and website/social profile are optional. The form validates locally, explicitly states that applications are not connected, and submits no information. Backend integration is deferred at the user's request.
+- Become a partner links scroll to an embedded application form. Email is required; full name and website/social profile are optional. The form validates locally and submits no information. Backend integration is deferred at the user's request.
 - Connect the existing registration/application API when supplied. Do not insert directly into a production partners table from browser code. Agree required fields, authentication, duplicate handling, consent, validation and response format with the backend team.
 - For users who both trade and partner, use the same authenticated user identity and link a pending partner application/profile to it. Approval and commission/program assignment must be controlled by the backend, not frontend-supplied flags.
 - Notifications and authenticated portal access are deferred; neither is implemented. Reuse the existing account/signup service rather than creating separate partner passwords.
