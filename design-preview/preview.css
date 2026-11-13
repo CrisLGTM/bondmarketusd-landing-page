@@ -1,0 +1,47 @@
+/* Visual-only theme over the current public landing page. */
+*{box-sizing:border-box}body{margin:0;background:#0b1220}button,input{font:inherit}button{border:0}h1,h2,p,dl{margin-top:0}button,summary,a{touch-action:manipulation}
+.bondswap-landing{--paper:#0b1220;--ink:#edf2fa;--muted:#aab6c8;--line:#263246;--accent:#8baeff;--lime:#b7cfff;--sky:#14213a;--pink:#d3ccee;color-scheme:dark;min-height:100vh}
+.bondswap-landing .brand-symbol{background:#3867f4}.bondswap-landing .brand-symbol i{border-color:#fff}
+.bondswap-landing .account-link,.bondswap-landing .primary-action{background:#2855e8;color:#fff;border-color:#2855e8}
+.bondswap-landing .primary-action:hover,.bondswap-landing .account-link:hover{background:#3564f2}
+.bondswap-landing .site-header nav{font-size:13px}
+.bondswap-landing .signup-card,.bondswap-landing .market-hero .signup-card{background:#131e30;border-color:#2b3950;border-top-color:#4273ff;box-shadow:none}
+.bondswap-landing .signup-intro{font-size:13px;color:var(--muted);margin:10px 0 24px}
+.preview-form>label{display:block;font-size:12px;margin:0 0 9px;color:#dce5f3}
+.preview-input{height:46px;display:flex;align-items:center;gap:12px;padding:0 14px;background:#0e1828;border:1px solid #35435a;border-radius:8px;color:#8f9eb5;margin-bottom:24px}
+.preview-input input{border:0;outline:0;min-width:0;width:100%;height:100%;background:transparent;color:#edf2fa;font-size:14px}
+.preview-input:focus-within{outline:2px solid #8baeff;outline-offset:2px}.preview-input input::placeholder{color:#91a0b6}
+.preview-submit{height:46px;width:100%;background:#2855e8;color:white;border-radius:7px;font-size:16px;margin:10px 0 14px}
+.bondswap-landing .bondswap-recover-link{background:none;color:#9bb9ff;padding:0;font-size:12px}
+.bondswap-landing .bondswap-auth-switch{font-size:12px;color:var(--muted);margin:24px 0 0}
+.bondswap-landing .bondswap-auth-switch button{background:none;color:#9bb9ff;padding:0}
+.bondswap-landing .challenge-note{border-top:1px solid var(--line);max-width:360px;margin:24px 0 0;padding-top:18px;font-size:12px;line-height:1.8;color:var(--muted)}
+.bondswap-landing .challenge-note a{color:#9bb9ff}.challenge-note a span{margin-left:6px}
+.bondswap-landing .visual{background:var(--sky);border-color:#2d4060}
+.bondswap-landing .view-toggle{background:#1c2d49;border-color:#354a6e}
+.bondswap-landing .view-toggle button{color:#b9c9e5}.bondswap-landing .view-toggle button[aria-pressed=true]{background:#2a4168;color:#fff;box-shadow:none}
+.bondswap-landing .chain-tag,.bondswap-landing .always-tag{background:transparent;border-color:#425d87;color:#b7ccf1}
+.bondswap-landing .playground-ring{border-color:#3c5279}
+.bondswap-landing .certificate{color:#14213b;border-color:#09101d;box-shadow:6px 7px 0 #080f1c}
+.bondswap-landing .ticket-divider:before,.bondswap-landing .ticket-divider:after{border-color:#14213b}
+.bondswap-landing .ticket-bottom,.bondswap-landing .nvidia-card .ticket-bottom{color:#43546d}
+.bondswap-landing .asset-mark{background:#14213b;color:#b7cfff}.bondswap-landing .nvidia-card .asset-mark{color:#d3ccee}
+.bondswap-landing .demo-coin{color:#14213b;background:#dee8f7;border-color:#09101d;box-shadow:4px 5px 0 #080f1c}
+.bondswap-landing .demo-coin>span{border-color:#8e9eb7}.bondswap-landing .coin-one{background:#c8d6ec}.bondswap-landing .coin-five{background:#83a8f3}
+.bondswap-landing .demo-instructions{color:#c0cfe6}.bondswap-landing .demo-note,.bondswap-landing .reset-artwork{color:#a6b9d7}
+.bondswap-landing .demo-note{font-size:11px}.bondswap-landing .reset-artwork{font-size:10px}
+.bondswap-landing .faq-list details{border-color:var(--line)}
+.bondswap-landing .basics-intro>p:not(.eyebrow),.bondswap-landing .faq-answer p{color:var(--muted)}
+.bondswap-landing .basics-cta{border-color:#40516b}
+.bondswap-landing footer,.bondswap-landing .footer-line{color:#9dabc0;font-size:11px}
+.bondswap-landing .hero-risk{font-size:12px}.bondswap-landing .hero-facts dt{font-size:12px}
+@media(max-width:700px){.bondswap-landing .challenge-note{max-width:none}.bondswap-landing footer{flex-wrap:wrap}.bondswap-landing .playground-section .certificate{box-shadow:3px 4px 0 #080f1c}}
+.preview-form label{display:block;font-size:12px;margin:0 0 9px;color:#dce5f3}
+.preview-name-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.preview-name-row>div{min-width:0}
+.preview-input select{border:0;background:transparent;color:#91a0b6;width:100%;height:100%;font-size:14px}
+.password-hint{font-size:11px;color:#aab6c8;margin:-14px 0 22px;line-height:1.6}
+.referral-details{border-top:1px solid #263246;padding:14px 0;margin-bottom:8px;font-size:12px}
+.referral-details summary{cursor:pointer;color:#b7c6dc}.referral-details summary span{color:#aab6c8}.referral-details[open] summary{margin-bottom:16px}.referral-details p{font-size:11px;color:#aab6c8;line-height:1.6}
+.bondswap-landing .bondswap-auth-switch a{color:#9bb9ff}
+.bondswap-landing .challenge-context{font-size:10px;color:#9bb9ff;letter-spacing:1px;margin-bottom:10px}
+.bondswap-landing .challenge-description{font-size:13px;line-height:1.6;color:#b7c6dc;padding-bottom:18px;margin-bottom:22px;border-bottom:1px solid #263246}

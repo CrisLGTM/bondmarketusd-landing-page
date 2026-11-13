@@ -1,0 +1,499 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;550;600;650;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+.bondswap-landing { --paper: #f7f8f2; --ink: #23271f; --muted: #777b70; --accent: #3f6aee; --lime: #d8fa79; --sky: #e5edff; --pink: #ffd5e5; --line: #dfe2d6; --sans: "DM Sans", Arial, sans-serif; --display: "Space Grotesk", Arial, sans-serif; }
+.bondswap-landing * { box-sizing: border-box; }
+.bondswap-landing { background: var(--paper); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; margin: 0px; overflow-x: clip; }
+.bondswap-landing button, .bondswap-landing input, .bondswap-landing select { font: inherit; }
+.bondswap-landing button, .bondswap-landing a { -webkit-tap-highlight-color: transparent; }
+.bondswap-landing button { cursor: pointer; }
+.bondswap-landing button:focus-visible, .bondswap-landing a:focus-visible, .bondswap-landing input:focus-visible, .bondswap-landing select:focus-visible { outline-offset: 4px; outline: rgb(40, 80, 186) solid 3px; }
+.bondswap-landing a { color: inherit; text-decoration: none; }
+.bondswap-landing button { color: inherit; }
+.bondswap-landing [hidden] { display: none !important; }
+.bondswap-landing .site-header { justify-content: space-between; align-items: center; gap: 35px; max-width: 1640px; margin: auto; padding: 26px 40px; display: flex; }
+.bondswap-landing .wordmark { font-family: var(--display); letter-spacing: -1.8px; align-items: center; font-size: 29px; font-weight: 700; display: flex; }
+.bondswap-landing .wordmark > span:not(.brand-symbol):not(.brand-dot) { font-weight: 400; }
+.bondswap-landing .brand-symbol { background: var(--accent); border-radius: 10px; place-items: center; width: 29px; height: 29px; margin-right: 9px; display: grid; transform: rotate(-8deg); }
+.bondswap-landing .brand-symbol i { border: 2px solid var(--paper); border-radius: 3px; width: 13px; height: 13px; transform: rotate(45deg); }
+.bondswap-landing .brand-dot { font: 14px var(--sans); color: var(--accent); align-self: start; margin-left: 5px; }
+.bondswap-landing .site-header nav { align-items: center; gap: 27px; display: flex; }
+.bondswap-landing .site-header nav button { background: 0px 0px; border: 0px; padding: 7px 0px; font-size: 12px; }
+.bondswap-landing .site-header nav button:hover { color: var(--accent); }
+.bondswap-landing .powered-by { color: var(--muted); font-size: 10px; }
+.bondswap-landing .powered-by strong { color: var(--ink); margin-left: 3px; font-weight: 650; }
+.bondswap-landing .landing { isolation: isolate; grid-template-columns: minmax(340px, 0.85fr) minmax(0px, 1.4fr); gap: clamp(36px, 5vw, 88px); max-width: 1640px; margin: auto; padding: 14px 40px 0px; display: grid; position: relative; }
+.bondswap-landing .editorial { min-width: 0px; padding: 25px 0px 0px; }
+.bondswap-landing .eyebrow { letter-spacing: 1.25px; align-items: center; gap: 8px; margin: 0px 0px 19px; font-size: 9px; font-weight: 600; display: flex; }
+.bondswap-landing .eyebrow-dot { background: var(--accent); border-radius: 50%; width: 6px; height: 6px; }
+.bondswap-landing :where(#headline) { font-family: var(--display); letter-spacing: -5.5px; width: fit-content; margin: 0px; font-size: clamp(66px, 6vw, 105px); font-weight: 600; line-height: 0.98; position: relative; }
+.bondswap-landing :where(#headline) > span:first-of-type { color: var(--accent); }
+.bondswap-landing .headline-star { color: var(--ink); font-size: 38px; position: absolute; top: 12px; right: -37px; transform: rotate(-12deg); }
+.bondswap-landing .intro { color: rgb(113, 119, 106); max-width: 390px; margin: 23px 0px 27px; font-size: 13px; line-height: 1.7; }
+.bondswap-landing .signup-card { background: rgb(255, 255, 255); border: 1px solid rgb(224, 227, 216); border-radius: 24px; max-width: 420px; padding: 24px; box-shadow: rgb(238, 240, 229) 0px 5px; }
+.bondswap-landing .signup-heading { justify-content: space-between; align-items: center; gap: 12px; display: flex; }
+.bondswap-landing .signup-heading h2 { letter-spacing: -0.5px; font-size: 18px; font-family: var(--display); margin: 0px; font-weight: 600; }
+.bondswap-landing .signup-preview-badge { letter-spacing: 0.7px; color: var(--muted); border: 1px solid rgb(224, 227, 216); border-radius: 5px; padding: 4px 6px; font-size: 7px; }
+.bondswap-landing .signup-progress { color: rgb(147, 152, 138); align-items: center; gap: 12px; margin: 23px 0px; font-size: 10px; display: flex; }
+.bondswap-landing .signup-progress > span:not(.progress-line) { white-space: nowrap; align-items: center; gap: 6px; display: flex; }
+.bondswap-landing .signup-progress b { background: rgb(241, 243, 237); border-radius: 50%; place-items: center; width: 19px; height: 19px; font-size: 9px; font-weight: 500; display: grid; }
+.bondswap-landing .signup-progress [aria-current="step"] { color: var(--ink); }
+.bondswap-landing .signup-progress [aria-current="step"] b { background: var(--lime); }
+.bondswap-landing .progress-line { background: rgb(228, 231, 221); flex: 1 1 0%; height: 1px; }
+.bondswap-landing .form-field { min-width: 0px; margin-bottom: 15px; }
+.bondswap-landing .form-field > label { margin-bottom: 7px; font-size: 10px; font-weight: 550; display: block; }
+.bondswap-landing .form-field label > span { color: rgb(128, 135, 119); font-weight: 400; }
+.bondswap-landing .form-field input, .bondswap-landing .form-field select { color: var(--ink); background: rgb(246, 247, 242); border: 1px solid rgb(232, 234, 221); border-radius: 10px; width: 100%; min-height: 43px; padding: 11px 12px; font-size: 12px; display: block; }
+.bondswap-landing .form-field input::placeholder { color: rgb(150, 155, 143); }
+.bondswap-landing .form-field input:focus, .bondswap-landing .form-field select:focus { border-color: rgb(137, 168, 228); }
+.bondswap-landing .form-field input[aria-invalid="true"] { border-color: rgb(176, 74, 69); }
+.bondswap-landing .form-field select { --lightningcss-light: initial; --lightningcss-dark: ; color-scheme: light; }
+.bondswap-landing .form-row { grid-template-columns: 1fr 1fr; gap: 12px; display: grid; }
+.bondswap-landing .password-input { position: relative; }
+.bondswap-landing .password-input input { padding-right: 55px; }
+.bondswap-landing .password-toggle { color: rgb(110, 120, 100); background: 0px 0px; border: 0px; height: 43px; padding: 0px; font-size: 9px; position: absolute; top: 0px; right: 11px; }
+.bondswap-landing .field-hint { color: rgb(133, 140, 125); margin: 6px 0px 0px; font-size: 8px; line-height: 1.5; }
+.bondswap-landing .field-hint.is-error { color: rgb(167, 63, 58); }
+.bondswap-landing fieldset { border: 0px; min-width: 0px; margin: 0px; padding: 0px; }
+.bondswap-landing .signup-submit { background: var(--ink); width: 100%; min-height: 45px; color: var(--lime); border: 1px solid var(--ink); border-radius: 11px; justify-content: space-between; align-items: center; gap: 15px; padding: 0px 15px; font-size: 12px; font-weight: 600; transition: background 0.18s, transform 0.18s; display: flex; }
+.bondswap-landing .signup-submit > span { font-size: 20px; }
+.bondswap-landing .signup-submit:hover { background: rgb(57, 62, 46); transform: translateY(-1px); }
+.bondswap-landing .signup-preview-note { color: rgb(139, 145, 132); margin: 12px 0px 0px; font-size: 8px; line-height: 1.6; }
+.bondswap-landing .signup-options { border-top: 1px solid rgb(227, 231, 217); border-bottom: 1px solid rgb(227, 231, 217); margin: 7px 0px 17px; padding: 13px 0px; }
+.bondswap-landing .signup-options summary { cursor: pointer; color: rgb(123, 132, 112); justify-content: space-between; font-size: 9px; list-style: none; display: flex; }
+.bondswap-landing .signup-options summary::-webkit-details-marker { display: none; }
+.bondswap-landing .signup-options[open] summary { margin-bottom: 13px; }
+.bondswap-landing .signup-options[open] summary span { transform: rotate(45deg); }
+.bondswap-landing .signup-options .form-row { grid-template-columns: 1fr; }
+.bondswap-landing .signup-consent { color: rgb(124, 132, 114); cursor: pointer; align-items: flex-start; gap: 8px; margin: 0px 0px 17px; font-size: 9px; line-height: 1.65; display: flex; }
+.bondswap-landing .signup-consent input { width: 13px; height: 13px; accent-color: var(--accent); flex-shrink: 0; margin: 2px 0px 0px; }
+.bondswap-landing .signup-link { color: rgb(59, 98, 190); text-underline-offset: 2px; font-size: inherit; background: 0px 0px; border: 0px; padding: 0px; text-decoration: underline; }
+.bondswap-landing .form-back { color: rgb(123, 132, 112); background: 0px 0px; border: 0px; padding: 13px 0px 0px; font-size: 9px; }
+.bondswap-landing .signup-complete h2 { font: 600 34px / 1.05 var(--display); letter-spacing: -1px; margin: 15px 0px; }
+.bondswap-landing .signup-complete p { color: var(--muted); margin-bottom: 23px; font-size: 12px; line-height: 1.7; }
+.bondswap-landing .complete-icon { color: var(--accent); font-size: 40px; }
+.bondswap-landing .signup-complete > .signup-link { margin-top: 18px; font-size: 10px; display: block; }
+.bondswap-landing .visual { background: var(--sky); border: 1px solid rgb(211, 223, 245); border-radius: 34px; align-self: start; height: calc(-135px + 100svh); min-height: 735px; max-height: 980px; margin-bottom: 10px; position: sticky; top: 18px; overflow: visible; }
+.bondswap-landing .visual-top { z-index: 25; justify-content: space-between; align-items: center; gap: 12px; display: flex; position: absolute; top: 23px; left: 25px; right: 25px; }
+.bondswap-landing .view-toggle { background: rgb(208, 221, 247); border: 1px solid rgb(190, 207, 240); border-radius: 30px; gap: 3px; padding: 4px; display: flex; }
+.bondswap-landing .view-toggle button { color: rgb(88, 108, 143); background: 0px 0px; border: 0px; border-radius: 24px; padding: 9px 14px; font-size: 10px; }
+.bondswap-landing .view-toggle button[aria-pressed="true"] { background: var(--paper); color: var(--ink); box-shadow: rgba(40, 74, 130, 0.07) 0px 1px 4px; }
+.bondswap-landing .soundless { background: 0px 0px; border: 1px solid rgb(183, 201, 234); border-radius: 50%; width: 30px; height: 30px; font-size: 10px; }
+.bondswap-landing .playground-caption { color: rgb(97, 119, 149); justify-content: space-between; align-items: center; gap: 10px; font-size: 9px; display: flex; position: absolute; top: 102px; left: 29px; right: 29px; }
+.bondswap-landing .chain-tag { border: 1px solid rgb(173, 194, 227); border-radius: 30px; align-items: center; gap: 5px; padding: 7px 11px; display: flex; }
+.bondswap-landing .always-tag { background: var(--lime); color: var(--ink); border: 1px solid rgb(37, 41, 30); border-radius: 6px; padding: 8px 12px; font-size: 9px; transform: rotate(5deg); box-shadow: rgb(37, 41, 30) 2px 2px; }
+.bondswap-landing .always-tag > span { margin-left: 8px; }
+.bondswap-landing .playground-ring { pointer-events: none; border: 1px dashed rgb(180, 200, 233); border-radius: 50%; width: 74%; height: 55%; position: absolute; top: 24%; left: 13%; transform: rotate(-22deg); }
+.bondswap-landing .connector { font: 400 100px var(--display); color: rgb(165, 189, 232); pointer-events: none; position: absolute; top: 42%; left: 45%; transform: rotate(-25deg); }
+.bondswap-landing .art-stage { pointer-events: none; z-index: 10; position: absolute; inset: 0px; }
+.bondswap-landing .art-object { pointer-events: auto; cursor: grab; touch-action: none; user-select: none; translate: var(--dx,0px) var(--dy,0px); animation: 7s ease-in-out 0s infinite normal none running bob; position: absolute; }
+.bondswap-landing .certificate { background: var(--lime); width: 230px; height: 251px; color: var(--ink); border: 2px solid var(--ink); text-align: left; box-shadow: 6px 7px 0 var(--ink); border-radius: 24px; padding: 21px 20px; display: block; }
+.bondswap-landing .ticket-top { letter-spacing: 0.5px; align-items: center; gap: 9px; font-size: 7px; font-weight: 600; line-height: 1.4; display: flex; }
+.bondswap-landing .asset-mark { color: var(--lime); width: 35px; height: 35px; font: 600 29px var(--display); background: rgb(37, 41, 30); border-radius: 50%; place-items: center; display: grid; }
+.bondswap-landing .ticket-arrow { margin-left: auto; font-size: 26px; }
+.bondswap-landing .ticker { font: 600 42px / 1 var(--display); letter-spacing: -2px; margin-top: 23px; display: block; }
+.bondswap-landing .issuer-name { margin-top: 5px; font-size: 11px; display: block; }
+.bondswap-landing .ticket-divider { border-top: 2px dashed rgba(38, 49, 30, 0.25); margin: 22px -20px 15px; display: block; position: relative; }
+.bondswap-landing .ticket-divider::before, .bondswap-landing .ticket-divider::after { content: ""; background: var(--sky); border: 2px solid var(--ink); border-radius: 50%; width: 15px; height: 15px; position: absolute; top: -9px; }
+.bondswap-landing .ticket-divider::before { border-left-color: rgba(0, 0, 0, 0); left: -9px; }
+.bondswap-landing .ticket-divider::after { border-right-color: rgba(0, 0, 0, 0); right: -9px; }
+.bondswap-landing .allocation-line { justify-content: space-between; align-items: center; gap: 8px; font-size: 8px; display: flex; }
+.bondswap-landing .allocation-line strong { font-size: 11px; font-weight: 650; }
+.bondswap-landing .ticket-bottom { letter-spacing: 0.8px; color: rgb(89, 107, 54); margin-top: 16px; font-size: 5px; font-weight: 600; display: block; }
+.bondswap-landing .alphabet-card { top: 23%; left: 15%; transform: rotate(-12deg); }
+.bondswap-landing .nvidia-card { background: var(--pink); animation-delay: -3s; top: 43%; left: 52%; transform: rotate(12deg); }
+.bondswap-landing .nvidia-card .asset-mark { color: var(--pink); }
+.bondswap-landing .nvidia-card .ticket-bottom { color: rgb(144, 107, 119); }
+.bondswap-landing .demo-coin { border: 2px solid var(--ink); background: var(--paper); width: 83px; height: 83px; box-shadow: 4px 5px 0 var(--ink); border-radius: 50%; place-items: center; padding: 5px; display: grid; }
+.bondswap-landing .demo-coin > span { width: 100%; height: 100%; font: 600 30px / 1 var(--display); text-align: center; letter-spacing: -1.5px; border: 1px dashed rgb(162, 167, 145); border-radius: 50%; align-content: center; display: grid; }
+.bondswap-landing .demo-coin small { font: 500 7px var(--sans); letter-spacing: 0.4px; margin-top: 5px; }
+.bondswap-landing .coin-half { width: 68px; height: 68px; animation-delay: -2s; top: 24%; left: 76%; }
+.bondswap-landing .coin-half > span { letter-spacing: -1px; font-size: 22px; }
+.bondswap-landing .coin-one { background: rgb(206, 235, 223); animation-delay: -4s; top: 60%; left: 8%; }
+.bondswap-landing .coin-five { background: rgb(170, 197, 255); animation-delay: -1s; top: 77%; left: 77%; }
+.bondswap-landing .floating-sticker { font: 500 12px / 1.2 var(--display); color: rgb(98, 124, 159); pointer-events: none; position: absolute; top: 75%; left: 29%; transform: rotate(-9deg); }
+.bondswap-landing .demo-instructions { color: rgb(76, 101, 144); align-items: flex-start; gap: 12px; display: flex; position: absolute; bottom: 40px; left: 30px; right: 27px; }
+.bondswap-landing .instruction-icon { font-style: ; font-variant-ligatures: ; font-variant-caps: ; font-variant-numeric: ; font-variant-east-asian: ; font-variant-alternates: ; font-variant-position: ; font-variant-emoji: ; font-weight: ; font-stretch: ; font-size: ; font-family: ; font-optical-sizing: ; font-size-adjust: ; font-kerning: ; font-feature-settings: ; font-variation-settings: ; font-language-override: ; line-height: 1; transform: rotate(-15deg); }
+.bondswap-landing .demo-instructions h2 { font: 600 15px var(--display); letter-spacing: -0.3px; margin: 0px 0px 7px; }
+.bondswap-landing .demo-instructions p { max-width: 320px; margin: 0px 0px 6px; font-size: 10px; line-height: 1.6; }
+.bondswap-landing .demo-note { color: rgb(124, 145, 173); font-size: 7px; }
+.bondswap-landing .reset-artwork { color: rgb(113, 134, 164); z-index: 35; background: 0px 0px; border: 0px; padding: 0px; font-size: 7px; position: absolute; bottom: 17px; right: 26px; }
+.bondswap-landing .sample-basket { width: 267px; color: var(--ink); z-index: 30; background: rgb(249, 250, 243); border: 1px solid rgb(173, 194, 232); border-radius: 18px; padding: 17px; position: absolute; bottom: 35px; left: 25px; box-shadow: rgb(195, 212, 242) 0px 5px; }
+.bondswap-landing .basket-heading { justify-content: space-between; align-items: center; font-size: 11px; display: flex; }
+.bondswap-landing .basket-heading button { color: rgb(107, 130, 158); background: 0px 0px; border: 0px; padding: 0px; font-size: 8px; }
+.bondswap-landing .sample-basket dl { margin-bottom: 10px; font-size: 10px; }
+.bondswap-landing .sample-basket dl > div { justify-content: space-between; gap: 12px; margin-top: 9px; display: flex; }
+.bondswap-landing .sample-basket dd { font-variant-numeric: tabular-nums; margin: 0px; }
+.bondswap-landing .basket-total { border-top: 1px solid rgb(220, 228, 241); padding-top: 10px; font-weight: 600; }
+.bondswap-landing .sample-basket > small { color: rgb(118, 139, 168); font-size: 7px; }
+.bondswap-landing .has-allocation .demo-instructions, .bondswap-landing .has-allocation .floating-sticker { display: none; }
+.bondswap-landing .art-object.dragging { cursor: grabbing; z-index: 50; animation-play-state: paused; }
+.bondswap-landing .art-object.repositioned { z-index: 35; animation-play-state: paused; }
+.bondswap-landing .demo-coin[aria-pressed="true"] { outline: 4px solid var(--accent); outline-offset: 6px; animation-play-state: paused; }
+.bondswap-landing .certificate.awaiting-coin { outline: 2px dashed var(--accent); outline-offset: 9px; }
+.bondswap-landing .certificate.drop-hover { outline: 5px solid var(--accent); outline-offset: 9px; }
+.bondswap-landing .certificate.received { animation: 0.4s ease 0s 1 normal none running receipt, 7s ease-in-out 0.4s infinite normal none running bob; }
+.bondswap-landing .paused .art-object { animation-play-state: paused; }
+.bondswap-landing .viewer-placeholder { color: rgb(89, 117, 159); text-align: center; border: 1px dashed rgb(173, 195, 229); border-radius: 24px; flex-direction: column; justify-content: center; align-items: center; display: flex; position: absolute; inset: 100px 25px 30px; }
+.bondswap-landing .viewer-placeholder > span { font-size: 50px; }
+.bondswap-landing .viewer-placeholder h2 { font: 500 35px var(--display); letter-spacing: -1.5px; margin: 15px 0px 0px; }
+.bondswap-landing .viewer-placeholder p { font-size: 11px; }
+.bondswap-landing .showing-market .art-object { animation-play-state: paused; }
+.bondswap-landing footer { color: rgb(150, 156, 140); justify-content: space-between; align-items: center; gap: 20px; max-width: 1640px; margin: 0px auto; padding: 27px 40px; font-size: 8px; display: flex; }
+.bondswap-landing .footer-line { color: rgb(115, 124, 103); font-size: 10px; }
+.bondswap-landing footer button { color: rgb(124, 132, 111); background: 0px 0px; border: 0px; padding: 0px; font-size: 8px; }
+.bondswap-landing dialog { background: var(--paper); width: calc(100% - 36px); max-width: 460px; color: var(--ink); border: 1px solid rgb(215, 220, 203); border-radius: 24px; padding: 35px; }
+.bondswap-landing dialog::backdrop { backdrop-filter: blur(5px); background: rgba(37, 41, 30, 0.533); }
+.bondswap-landing dialog h2 { font: 600 34px / 1.05 var(--display); letter-spacing: -1.2px; margin: 20px 0px; }
+.bondswap-landing dialog p { color: rgb(109, 119, 98); margin: 0px 0px 25px; font-size: 13px; line-height: 1.8; }
+.bondswap-landing .dialog-close { color: rgb(108, 117, 97); background: 0px 0px; border: 0px; font-size: 26px; position: absolute; top: 12px; right: 18px; }
+.bondswap-landing .sr-only { clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border: 0px; width: 1px; height: 1px; margin: -1px; padding: 0px; position: absolute; overflow: hidden; }
+@keyframes bob { 
+  0%, 100% { margin-top: 0px; }
+  50% { margin-top: -12px; }
+}
+@keyframes receipt { 
+  50% { filter: brightness(1.12); box-shadow: 10px 12px 0 var(--accent); }
+}
+@media (width >= 1600px) {
+  .bondswap-landing .certificate { width: 265px; height: 275px; }
+  .bondswap-landing .ticker { font-size: 48px; }
+  .bondswap-landing .ticket-divider { margin-top: 28px; }
+  .bondswap-landing .intro { font-size: 14px; }
+  .bondswap-landing .signup-card { max-width: 450px; }
+  .bondswap-landing .visual { min-height: 800px; }
+  .bondswap-landing .nvidia-card { left: 53%; }
+}
+@media (width <= 1150px) {
+  .bondswap-landing .site-header { padding: 24px 28px; }
+  .bondswap-landing .landing { grid-template-columns: minmax(320px, 0.9fr) minmax(0px, 1.2fr); gap: 30px; padding: 10px 28px 0px; }
+  .bondswap-landing :where(#headline) { letter-spacing: -4px; font-size: 70px; }
+  .bondswap-landing .headline-star { font-size: 29px; right: -25px; }
+  .bondswap-landing .certificate { border-radius: 20px; width: 190px; height: 225px; padding: 17px 16px; }
+  .bondswap-landing .ticket-top { font-size: 6px; }
+  .bondswap-landing .asset-mark { width: 29px; height: 29px; font-size: 24px; }
+  .bondswap-landing .ticker { margin-top: 19px; font-size: 36px; }
+  .bondswap-landing .ticket-divider { margin: 18px -16px 13px; }
+  .bondswap-landing .ticket-bottom { margin-top: 14px; font-size: 4px; }
+  .bondswap-landing .alphabet-card { top: 25%; left: 10%; }
+  .bondswap-landing .nvidia-card { top: 47%; left: 48%; }
+  .bondswap-landing .coin-half { width: 59px; height: 59px; top: 27%; left: 77%; }
+  .bondswap-landing .coin-one { width: 68px; height: 68px; top: 61%; left: 9%; }
+  .bondswap-landing .coin-five { width: 64px; height: 64px; top: 79%; left: 79%; }
+  .bondswap-landing .floating-sticker { font-size: 10px; top: 75%; left: 30%; }
+  .bondswap-landing .visual-top { left: 18px; right: 18px; }
+  .bondswap-landing .view-toggle button { padding: 9px 11px; font-size: 9px; }
+  .bondswap-landing .playground-caption { top: 95px; left: 22px; right: 22px; }
+  .bondswap-landing .demo-instructions { left: 24px; right: 24px; }
+  .bondswap-landing .demo-instructions h2 { font-size: 13px; }
+  .bondswap-landing .demo-instructions p { max-width: 250px; font-size: 9px; }
+  .bondswap-landing .sample-basket { width: 240px; }
+  .bondswap-landing .signup-card { padding: 21px; }
+  .bondswap-landing .signup-heading h2 { font-size: 16px; }
+  .bondswap-landing .intro { font-size: 12px; }
+  .bondswap-landing footer { padding-left: 28px; padding-right: 28px; }
+}
+@media (width <= 850px) {
+  .bondswap-landing .site-header { padding: 22px 23px; }
+  .bondswap-landing .site-header nav { gap: 15px; }
+  .bondswap-landing .site-header nav button { font-size: 10px; }
+  .bondswap-landing .powered-by { font-size: 8px; }
+  .bondswap-landing .landing { grid-template-columns: minmax(0px, 1fr); gap: 28px; max-width: 650px; padding: 0px 23px; }
+  .bondswap-landing .editorial { padding-top: 20px; }
+  .bondswap-landing .hero-copy { max-width: 500px; }
+  .bondswap-landing .intro { max-width: 410px; font-size: 13px; }
+  .bondswap-landing .signup-card { max-width: none; }
+  .bondswap-landing .visual { height: 730px; min-height: 730px; position: relative; top: auto; }
+  .bondswap-landing .certificate { width: 225px; height: 250px; }
+  .bondswap-landing .alphabet-card { top: 25%; left: 15%; }
+  .bondswap-landing .nvidia-card { top: 47%; left: 48%; }
+  .bondswap-landing .ticker { margin-top: 23px; font-size: 42px; }
+  .bondswap-landing .ticket-divider { margin-top: 25px; }
+  .bondswap-landing .ticket-bottom { font-size: 5px; }
+  .bondswap-landing .coin-half { width: 65px; height: 65px; top: 24%; left: 78%; }
+  .bondswap-landing .coin-one { width: 78px; height: 78px; top: 62%; left: 8%; }
+  .bondswap-landing .coin-five { width: 70px; height: 70px; top: 79%; left: 80%; }
+  .bondswap-landing .signup-heading h2 { font-size: 20px; }
+  .bondswap-landing .form-field > label { font-size: 12px; }
+  .bondswap-landing .form-field input, .bondswap-landing .form-field select { min-height: 46px; font-size: 16px; }
+  .bondswap-landing .signup-submit { font-size: 13px; }
+  .bondswap-landing .signup-preview-note { font-size: 9px; }
+  .bondswap-landing .field-hint { font-size: 10px; }
+  .bondswap-landing .signup-progress, .bondswap-landing .signup-consent { font-size: 11px; }
+  .bondswap-landing footer { flex-wrap: wrap; gap: 12px; max-width: 650px; padding: 25px 23px; }
+  .bondswap-landing .risk-note { order: 3; width: 100%; font-size: 8px; }
+  .bondswap-landing .footer-line { font-size: 9px; }
+  .bondswap-landing .demo-instructions { bottom: 45px; }
+  .bondswap-landing .floating-sticker { top: 77%; left: 32%; }
+  .bondswap-landing .playground-caption { left: 25px; right: 25px; }
+  .bondswap-landing .view-toggle button { font-size: 10px; }
+}
+@media (width <= 520px) {
+  .bondswap-landing .site-header { gap: 15px; }
+  .bondswap-landing .site-header nav { display: none; }
+  .bondswap-landing .wordmark { font-size: 27px; }
+  .bondswap-landing .powered-by { text-align: right; max-width: 100px; line-height: 1.6; }
+  .bondswap-landing .powered-by strong { display: block; }
+  .bondswap-landing .landing { padding: 0px 18px; }
+  .bondswap-landing .editorial { padding-top: 13px; }
+  .bondswap-landing :where(#headline) { letter-spacing: -4.8px; font-size: 76px; }
+  .bondswap-landing .headline-star { font-size: 29px; top: 10px; right: -29px; }
+  .bondswap-landing .eyebrow { font-size: 8px; }
+  .bondswap-landing .intro { font-size: 12px; }
+  .bondswap-landing .signup-card { padding: 22px; }
+  .bondswap-landing .signup-heading h2 { font-size: 19px; }
+  .bondswap-landing .visual { border-radius: 27px; height: 720px; min-height: 720px; }
+  .bondswap-landing .certificate { width: 184px; height: 226px; }
+  .bondswap-landing .ticket-top { font-size: 6px; }
+  .bondswap-landing .ticker { font-size: 34px; }
+  .bondswap-landing .issuer-name { font-size: 10px; }
+  .bondswap-landing .ticket-divider { margin-top: 23px; }
+  .bondswap-landing .ticket-bottom { font-size: 4px; }
+  .bondswap-landing .alphabet-card { top: 25%; left: 10%; }
+  .bondswap-landing .nvidia-card { top: 49%; left: 41%; }
+  .bondswap-landing .coin-half { width: 54px; height: 54px; top: 27%; left: 78%; }
+  .bondswap-landing .coin-half > span { font-size: 18px; }
+  .bondswap-landing .coin-one { width: 66px; height: 66px; top: 61%; left: 6%; }
+  .bondswap-landing .coin-five { width: 58px; height: 58px; top: 81%; left: 79%; }
+  .bondswap-landing .demo-coin > span { font-size: 25px; }
+  .bondswap-landing .always-tag { padding: 7px 8px; font-size: 8px; }
+  .bondswap-landing .chain-tag { padding: 6px 8px; font-size: 8px; }
+  .bondswap-landing .visual-top { top: 20px; left: 17px; right: 17px; }
+  .bondswap-landing .view-toggle button { padding: 8px 10px; font-size: 9px; }
+  .bondswap-landing .playground-caption { left: 20px; right: 20px; }
+  .bondswap-landing .demo-instructions { gap: 9px; bottom: 40px; left: 22px; right: 20px; }
+  .bondswap-landing .demo-instructions h2 { font-size: 12px; }
+  .bondswap-landing .demo-instructions p { max-width: 260px; font-size: 9px; }
+  .bondswap-landing .demo-note { font-size: 6px; }
+  .bondswap-landing .instruction-icon { font-size: 25px; }
+  .bondswap-landing .sample-basket { width: 228px; bottom: 30px; left: 20px; }
+  .bondswap-landing .floating-sticker { display: none; }
+  .bondswap-landing .signup-options .form-row { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bondswap-landing *, .bondswap-landing ::before, .bondswap-landing ::after { scroll-behavior: auto !important; transition: none !important; animation: auto ease 0s 1 normal none running none !important; }
+}
+.bondswap-landing .site-header nav a { padding: 7px 0px; font-size: 12px; }
+.bondswap-landing .site-header nav a:hover { color: var(--accent); }
+.bondswap-landing .bond-basics { border-top: 1px solid var(--line); grid-template-columns: minmax(250px, 0.85fr) minmax(0px, 1.4fr); gap: clamp(36px, 5vw, 88px); max-width: 1640px; margin: 40px auto auto; padding: 65px 40px 35px; display: grid; }
+.bondswap-landing .basics-intro h2 { font: 600 clamp(35px, 3.2vw, 52px) / 1.05 var(--display); letter-spacing: -2px; margin: 0px 0px 20px; }
+.bondswap-landing .basics-intro h2 span { color: var(--accent); }
+.bondswap-landing .basics-intro > p:not(.eyebrow) { color: rgb(113, 119, 106); max-width: 300px; margin: 0px 0px 24px; font-size: 13px; line-height: 1.8; }
+.bondswap-landing .basics-cta { border-bottom: 1px solid rgb(192, 201, 180); align-items: center; gap: 35px; padding-bottom: 7px; font-size: 11px; display: inline-flex; }
+.bondswap-landing .basics-cta span { color: var(--accent); font-size: 17px; }
+.bondswap-landing .faq-list { border-top: 1px solid rgb(214, 221, 207); }
+.bondswap-landing .faq-list details { border-bottom: 1px solid rgb(214, 221, 207); }
+.bondswap-landing .faq-list summary { cursor: pointer; letter-spacing: -0.15px; justify-content: space-between; align-items: center; gap: 20px; padding: 20px 0px; font-size: 14px; font-weight: 500; list-style: none; display: flex; }
+.bondswap-landing .faq-list summary::-webkit-details-marker { display: none; }
+.bondswap-landing .faq-list summary > span { color: var(--accent); flex-shrink: 0; font-size: 20px; line-height: 1; }
+.bondswap-landing .faq-list details[open] summary > span { transform: rotate(45deg); }
+.bondswap-landing .faq-list summary:hover { color: var(--accent); }
+.bondswap-landing .faq-list summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.bondswap-landing .faq-answer { max-width: 680px; padding: 0px 35px 19px 0px; }
+.bondswap-landing .faq-answer p { color: rgb(108, 118, 99); margin: 0px 0px 10px; font-size: 12px; line-height: 1.85; }
+.bondswap-landing .faq-answer p:last-child { margin-bottom: 0px; }
+.bondswap-landing #bond-basics, .bondswap-landing #signup-panel { scroll-margin-top: 25px; }
+@media (width <= 1150px) {
+  .bondswap-landing .site-header nav a { font-size: 10px; }
+  .bondswap-landing .bond-basics { gap: 35px; padding: 45px 28px 25px; }
+  .bondswap-landing .faq-list summary { font-size: 12px; }
+  .bondswap-landing .faq-answer p { font-size: 11px; }
+}
+@media (width <= 850px) {
+  .bondswap-landing .bond-basics { grid-template-columns: 1fr; gap: 28px; max-width: 650px; margin-top: 25px; padding: 35px 23px 20px; }
+  .bondswap-landing .basics-intro h2 { font-size: 40px; }
+  .bondswap-landing .basics-intro h2 br { display: none; }
+  .bondswap-landing .basics-intro > p:not(.eyebrow) { max-width: 430px; font-size: 12px; }
+  .bondswap-landing .faq-list summary { padding: 19px 0px; font-size: 13px; }
+  .bondswap-landing .faq-answer p { font-size: 12px; }
+  .bondswap-landing .basics-intro .eyebrow { margin-bottom: 15px; }
+}
+.bondswap-landing { --lightningcss-light: initial; --lightningcss-dark: ; color-scheme: light; min-height: 100svh; }
+.bondswap-landing .signup-intro { color: var(--muted); margin: 10px 0px 22px; font-size: 11px; }
+.bondswap-landing .bondswap-auth-switch { color: var(--muted); margin-top: 20px; font-size: 12px; }
+.bondswap-landing .bondswap-auth-switch > button { color: var(--accent); font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; font-optical-sizing: inherit; font-size-adjust: inherit; font-kerning: inherit; font-feature-settings: inherit; font-variation-settings: inherit; font-language-override: inherit; cursor: pointer; background: 0px 0px; border: 0px; padding: 0px; font-weight: 600; }
+.bondswap-landing .signin-link:focus-visible, .bondswap-landing .bondswap-auth-switch > button:focus-visible, .bondswap-landing .bondswap-recover-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.bondswap-landing .bondswap-recover-link { color: var(--accent); cursor: pointer; background: 0px 0px; border: 0px; margin-top: 16px; padding: 0px; font-family: inherit; font-size: 12px; display: inline-block; }
+.bondswap-landing .signin-link:hover, .bondswap-landing .bondswap-auth-switch > button:hover, .bondswap-landing .bondswap-recover-link:hover { text-decoration: underline; }
+.bondswap-landing .bondswap-signup { --color-auth-field-label: #23271f; --color-auth-input-border: #e8eadd; --color-auth-input-bg: #f6f7f2; --color-auth-input-text: #23271f; --color-auth-caption-dim: #7c8472; --color-auth-error: #a73f3a; --color-auth-link: #3f6aee; flex-direction: column; gap: 4px; display: flex; }
+.bondswap-landing .bondswap-signup label { color: var(--ink); margin-bottom: 7px; font-size: 11px; }
+.bondswap-landing .bondswap-signup input:not([type="hidden"]), .bondswap-landing .bondswap-signup button[role="combobox"] { color: var(--ink); background: rgb(246, 247, 242); border: 1px solid rgb(232, 234, 221); border-radius: 10px; height: 43px; font-size: 12px; }
+.bondswap-landing .bondswap-signup input::placeholder { color: rgb(150, 155, 143); }
+.bondswap-landing .bondswap-signup input:focus, .bondswap-landing .bondswap-signup button[role="combobox"]:focus-visible { border-color: var(--accent); }
+.bondswap-landing .bondswap-signup [class*="text-auth-caption"], .bondswap-landing .bondswap-signup [class*="text-auth-subtle"] { color: var(--muted); }
+.bondswap-landing .bondswap-signup [class*="text-auth-error"], .bondswap-landing .bondswap-signup .text-danger { color: rgb(167, 63, 58); }
+.bondswap-landing .bondswap-signup span.min-h-5 { min-height: 12px; margin-top: 3px; font-size: 10px; }
+.bondswap-landing .bondswap-signup > .py-2 { order: 1; }
+.bondswap-landing .bondswap-signup > button[type="submit"] { order: 2; }
+.bondswap-landing .bondswap-signup button[type="submit"]:disabled { opacity: 0.5; cursor: not-allowed; }
+.bondswap-landing .bondswap-signup ul { font-size: 11px; }
+.bondswap-landing .signup-complete h2 { width: auto; }
+@media (width <= 850px) {
+  .bondswap-landing .bondswap-signup input:not([type="hidden"]), .bondswap-landing .bondswap-signup button[role="combobox"] { font-size: 16px; }
+}
+.bondswap-country-picker { --color-text-2: #23271f; --color-text-0: #59624f; --color-layer-2: #f6f7f2; --color-layer-3: #e5edff; --color-border: #dfe2d6; --color-auth-input-bg: #f6f7f2; --color-auth-input-text: #23271f; --color-auth-input-border: #e8eadd; --color-auth-caption-dim: #59624f; --lightningcss-light: initial; --lightningcss-dark: ; color-scheme: light; color: rgb(35, 39, 31); background: rgb(246, 247, 242); font-family: "DM Sans", Arial, sans-serif; }
+.bondswap-country-picker [cmdk-item][data-selected="true"] { color: rgb(35, 39, 31); background: rgb(229, 237, 255); }
+@media (width <= 520px) {
+  .bondswap-landing { overflow-x: clip; }
+  .bondswap-landing :where(#headline) { letter-spacing: -4px; font-size: clamp(58px, 17.5vw, 76px); }
+  .bondswap-landing .headline-star { font-size: 24px; right: -22px; }
+}
+.bondswap-landing { --paper: #f7f8f2; --ink: #14213b; --muted: #59657b; --line: #dce2ec; --accent: #2959e8; }
+.bondswap-landing .site-header { border-bottom: 1px solid var(--line); gap: 24px; max-width: 1440px; padding: 25px 48px; }
+.bondswap-landing .site-header .powered-by { white-space: nowrap; display: block; }
+.bondswap-landing .header-actions { align-items: center; gap: 24px; font-size: 13px; display: flex; }
+.bondswap-landing .header-actions button { font: inherit; cursor: pointer; border: 0px; }
+.bondswap-landing .header-actions .signin-link { background: 0px 0px; padding: 12px 0px; }
+.bondswap-landing .account-link { background: var(--ink); color: rgb(255, 255, 255); border-radius: 7px; padding: 13px 18px; }
+.bondswap-landing .market-hero { grid-template-columns: minmax(0px, 1.12fr) minmax(0px, 1fr); align-items: center; gap: 64px; max-width: 1280px; margin: auto; padding: 48px 48px 56px; display: grid; }
+.bondswap-landing .market-copy { min-width: 0px; }
+.bondswap-landing .market-copy .eyebrow { letter-spacing: 1.4px; margin-bottom: 26px; font-size: 10px; }
+.bondswap-landing .market-copy h1 { letter-spacing: -0.065em; font-size: clamp(56px, 5.3vw, 76px); line-height: 1.04; }
+.bondswap-landing .market-intro { max-width: 440px; color: var(--muted); margin: 24px 0px 12px; font-size: 17px; line-height: 1.65; }
+.bondswap-landing .hero-actions { align-items: center; gap: 28px; font-size: 14px; display: flex; }
+.bondswap-landing .primary-action { background: var(--lime); border: 1px solid rgb(185, 217, 116); border-radius: 7px; justify-content: space-between; gap: 34px; padding: 17px 21px; font-weight: 600; display: inline-flex; }
+.bondswap-landing .primary-action:hover { background: rgb(201, 237, 102); }
+.bondswap-landing .text-action { padding: 14px 0px; }
+.bondswap-landing .hero-facts { gap: 32px; margin: 43px 0px 0px; display: flex; }
+.bondswap-landing .hero-facts dt { color: var(--muted); margin-bottom: 9px; font-size: 11px; }
+.bondswap-landing .hero-facts dd { font: 500 17px var(--display); margin: 0px; }
+.bondswap-landing .hero-risk { color: var(--muted); margin-top: 20px; font-size: 11px; }
+.bondswap-landing .signup-card { max-width: none; box-shadow: none; border-radius: 14px; padding: 28px; }
+.bondswap-landing .signup-heading h2 { font-size: 23px; }
+.bondswap-landing .visual { border-radius: 14px; grid-area: 1 / 1; height: 690px; min-height: 690px; position: relative; top: 0px; overflow: hidden; }
+.bondswap-landing .art-object { animation: auto ease 0s 1 normal none running none; }
+.bondswap-landing .soundless { display: none; }
+.bondswap-landing .alphabet-card { transform: rotate(-3deg); }
+.bondswap-landing .nvidia-card { left: 48%; transform: rotate(3deg); }
+.bondswap-landing .floating-sticker, .bondswap-landing .connector { display: none; }
+.bondswap-landing .always-tag { box-shadow: none; border-color: rgb(187, 213, 138); transform: none; }
+.bondswap-landing .ticket-bottom { letter-spacing: 0px; font-size: 6px; }
+.bondswap-landing .form-field > label, .bondswap-landing .signup-consent { font-size: 11px; }
+.bondswap-landing .field-hint { font-size: 10px; }
+.bondswap-landing .bond-basics { max-width: 1440px; padding-left: 48px; padding-right: 48px; }
+.bondswap-landing .faq-answer p { color: var(--muted); font-size: 13px; }
+.bondswap-landing footer { max-width: 1440px; padding-left: 48px; padding-right: 48px; }
+.bondswap-landing .footer-line::after { content: " / Powered by BondTrader"; }
+.bondswap-landing .brand-lockup { flex-direction: column; flex-shrink: 0; align-items: flex-start; gap: 6px; display: flex; }
+.bondswap-landing .site-header .brand-lockup .powered-by { text-align: left; width: auto; max-width: none; margin: 0px 0px 0px 38px; font-size: 9px; line-height: 1.4; }
+.bondswap-landing .brand-lockup .powered-by strong { display: inline; }
+.bondswap-landing .site-header > .header-actions { margin-left: 0px; }
+.bondswap-landing .product-clarification { margin: 0px 0px 27px; font-size: 13px; }
+.bondswap-landing .market-hero .signup-card { border-top: 4px solid var(--accent); width: 100%; min-width: 0px; box-shadow: rgb(232, 236, 223) 0px 5px; }
+.bondswap-landing .market-hero fieldset { border: 0px; min-width: 0px; margin: 0px; padding: 0px; }
+.bondswap-landing .market-hero .signup-progress { margin: 18px 0px 12px; }
+.bondswap-landing .market-hero .signup-submit { min-height: 46px; }
+.bondswap-landing .playground-section { border-top: 1px solid var(--line); max-width: 1280px; margin: auto; padding: 32px 48px 0px; scroll-margin-top: 24px; }
+.bondswap-landing .playground-heading { justify-content: space-between; align-items: center; gap: 24px; margin-bottom: 25px; display: flex; }
+.bondswap-landing .playground-heading h2 { font: 600 36px / 1.15 var(--display); letter-spacing: -1.5px; margin: 0px 0px 12px; }
+.bondswap-landing .playground-heading p:not(.eyebrow) { color: var(--muted); max-width: 540px; margin: 0px; font-size: 14px; line-height: 1.6; }
+.bondswap-landing .playground-heading > a { white-space: nowrap; color: var(--accent); border-bottom: 1px solid var(--accent); font-size: 13px; }
+.bondswap-landing .playground-section .visual { width: 100%; height: 520px; min-height: 520px; max-height: none; }
+.bondswap-landing .playground-section .certificate { width: 230px; height: 251px; top: 125px; }
+.bondswap-landing .playground-section .alphabet-card { left: 23%; }
+.bondswap-landing .playground-section .nvidia-card { left: 52%; }
+.bondswap-landing .playground-section .coin-half { top: 160px; left: 9%; }
+.bondswap-landing .playground-section .coin-one { top: 310px; left: 10%; }
+.bondswap-landing .playground-section .coin-five { top: 250px; left: 82%; }
+.bondswap-landing .playground-section .playground-caption { top: 28px; left: auto; right: 25px; }
+.bondswap-landing .playground-section .playground-ring { height: 63%; top: 17%; }
+.bondswap-landing .playground-section .demo-instructions { bottom: 38px; }
+.bondswap-landing .playground-section .sample-basket { bottom: 35px; left: auto; right: 25px; }
+.bondswap-landing .bond-basics { gap: 60px; max-width: 1280px; padding-top: 38px; }
+.bondswap-landing .basics-intro h2 { font-size: 36px; }
+.bondswap-landing .faq-list summary { padding: 16px 0px; }
+.bondswap-landing .faq-answer p { line-height: 1.65; }
+@media (width <= 1100px) {
+  .bondswap-landing .site-header { flex-wrap: wrap; gap: 18px; padding: 22px 30px; }
+  .bondswap-landing .site-header .powered-by { text-align: right; width: 100%; }
+  .bondswap-landing .market-hero { gap: 32px; padding: 32px 30px 45px; }
+  .bondswap-landing .market-copy h1 { font-size: 58px; }
+  .bondswap-landing .hero-facts { gap: 24px; }
+  .bondswap-landing .playground-section { padding-left: 30px; padding-right: 30px; }
+  .bondswap-landing .playground-section .alphabet-card { left: 20%; }
+  .bondswap-landing .playground-section .nvidia-card { left: 53%; }
+  .bondswap-landing .playground-section .certificate { width: 200px; height: 240px; }
+}
+@media (width <= 850px) {
+  .bondswap-landing .site-header { gap: 12px; padding: 18px 24px; }
+  .bondswap-landing .site-header nav { order: 3; gap: 24px; width: 100%; display: flex; }
+  .bondswap-landing .site-header .powered-by { width: auto; margin-left: auto; }
+  .bondswap-landing .header-actions { gap: 15px; margin-left: auto; font-size: 12px; }
+  .bondswap-landing .market-hero { grid-template-columns: minmax(0px, 1fr); gap: 28px; max-width: 650px; padding: 28px 24px 36px; }
+  .bondswap-landing .market-copy h1 { font-size: 56px; }
+  .bondswap-landing .market-copy .eyebrow { margin-bottom: 18px; font-size: 9px; }
+  .bondswap-landing .market-intro { margin-top: 18px; font-size: 16px; }
+  .bondswap-landing .product-clarification { margin-bottom: 20px; }
+  .bondswap-landing .hero-facts { gap: 32px; margin-top: 24px; }
+  .bondswap-landing .hero-facts dt { margin-bottom: 6px; }
+  .bondswap-landing .hero-risk { margin-bottom: 0px; }
+  .bondswap-landing .signup-card { padding: 24px; }
+  .bondswap-landing .form-field > label, .bondswap-landing .signup-consent { font-size: 12px; }
+  .bondswap-landing .playground-section { max-width: 650px; padding: 28px 24px 0px; }
+  .bondswap-landing .playground-heading { flex-direction: column; align-items: start; gap: 10px; }
+  .bondswap-landing .playground-heading h2 { font-size: 30px; }
+  .bondswap-landing .playground-section .visual { height: 620px; min-height: 620px; }
+  .bondswap-landing .playground-section .playground-caption { top: 85px; left: 22px; right: 22px; }
+  .bondswap-landing .playground-section .certificate { width: calc(50% - 32px); height: 235px; top: 175px; transform: none; }
+  .bondswap-landing .playground-section .alphabet-card { left: 20px; }
+  .bondswap-landing .playground-section .nvidia-card { left: auto; right: 20px; }
+  .bondswap-landing .playground-section .coin-half, .bondswap-landing .playground-section .coin-one, .bondswap-landing .playground-section .coin-five { width: 54px; height: 54px; top: 440px; }
+  .bondswap-landing .playground-section .coin-half { left: 12%; }
+  .bondswap-landing .playground-section .coin-one { left: calc(50% - 27px); }
+  .bondswap-landing .playground-section .coin-five { left: auto; right: 12%; }
+  .bondswap-landing .playground-section .sample-basket { width: calc(100% - 40px); bottom: 30px; right: 20px; }
+  .bondswap-landing .playground-section .has-allocation { height: 720px; min-height: 720px; }
+  .bondswap-landing .bond-basics { gap: 24px; padding: 32px 24px 20px; }
+  .bondswap-landing .basics-intro h2 span { display: block; }
+}
+@media (width <= 520px) {
+  .bondswap-landing .site-header { padding: 18px; }
+  .bondswap-landing .wordmark { font-size: 25px; }
+  .bondswap-landing .brand-symbol { width: 24px; height: 24px; }
+  .bondswap-landing .site-header .brand-lockup .powered-by { margin-left: 33px; font-size: 8px; }
+  .bondswap-landing .site-header .powered-by { order: 4; max-width: none; font-size: 9px; }
+  .bondswap-landing .powered-by strong { display: inline; }
+  .bondswap-landing .account-link { padding: 11px; }
+  .bondswap-landing .header-actions { gap: 12px; font-size: 11px; }
+  .bondswap-landing .market-hero { padding: 22px 18px 32px; }
+  .bondswap-landing .market-copy h1 { font-size: 51px; }
+  .bondswap-landing .hero-actions { gap: 22px; font-size: 13px; }
+  .bondswap-landing .hero-facts { gap: 25px; }
+  .bondswap-landing .hero-facts dd { font-size: 16px; }
+  .bondswap-landing .signup-card { padding: 21px; }
+  .bondswap-landing .playground-section { padding-left: 18px; padding-right: 18px; }
+  .bondswap-landing .visual { height: 620px; min-height: 620px; }
+  .bondswap-landing .certificate { width: calc(50% - 24px); height: 225px; box-shadow: 3px 4px 0 var(--ink); padding: 16px 12px; top: 175px; transform: none; }
+  .bondswap-landing .alphabet-card { left: 16px; }
+  .bondswap-landing .nvidia-card { left: auto; right: 16px; }
+  .bondswap-landing .ticket-top { gap: 5px; font-size: 5px; }
+  .bondswap-landing .ticket-arrow { font-size: 18px; }
+  .bondswap-landing .ticker { letter-spacing: -1px; font-size: 28px; }
+  .bondswap-landing .ticket-divider { margin-left: -12px; margin-right: -12px; }
+  .bondswap-landing .allocation-line { display: block; }
+  .bondswap-landing .allocation-line strong { margin-top: 5px; display: block; }
+  .bondswap-landing .ticket-bottom { display: none; }
+  .bondswap-landing .coin-half, .bondswap-landing .coin-one, .bondswap-landing .coin-five { width: 54px; height: 54px; top: 425px; }
+  .bondswap-landing .coin-half { left: 12%; }
+  .bondswap-landing .coin-one { left: calc(50% - 27px); }
+  .bondswap-landing .coin-five { left: auto; right: 12%; }
+  .bondswap-landing .demo-instructions { bottom: 48px; }
+}
+.bondswap-landing .market-hero { align-items: start; }
+.bondswap-landing .market-copy { padding-top: 40px; }
+@media (width <= 850px) {
+  .bondswap-landing .market-copy { padding-top: 0px; }
+}
+@media (width <= 380px) {
+  .bondswap-landing .market-copy h1 { font-size: 44px; }
+  .bondswap-landing .hero-actions { gap: 16px; }
+  .bondswap-landing .primary-action { white-space: nowrap; gap: 20px; padding: 15px; }
+}
+.bondswap-toaster { font-family: "DM Sans", Arial, sans-serif; }
+.bondswap-toaster #NotificationItemComponent { color: rgb(20, 33, 59); background: rgb(255, 255, 255); border: 1px solid rgb(220, 226, 236); border-radius: 12px; width: 100%; margin-top: 0px; box-shadow: rgba(20, 33, 59, 0.14) 0px 8px 28px; }
+.bondswap-toaster #NotificationItemComponent h1 { letter-spacing: normal; color: rgb(20, 33, 59); flex: 1 1 0%; width: auto; min-width: 0px; margin: 0px; font: 600 14px / 1.4 "DM Sans", Arial, sans-serif; }
+.bondswap-toaster #NotificationItemComponent [class*="text-"] { color: rgb(89, 101, 123); }
+.bondswap-toaster #NotificationItemComponent > div:last-child { padding: 12px; }
+.bondswap-toaster #NotificationItemComponent .text-sm { overflow-wrap: anywhere; font-size: 12px; line-height: 1.5; }
+.bondswap-toaster #NotificationItemComponent [class*="text-[11px]"] { letter-spacing: normal; font-size: 10px; }
+.bondswap-toaster #NotificationItemComponent button { color: rgb(89, 101, 123); background: rgb(241, 244, 249); }
+.bondswap-toaster #NotificationItemComponent button:hover { color: rgb(20, 33, 59); background: rgb(229, 237, 255); }
+.bondswap-toaster [data-sonner-toast], .bondswap-toaster [data-sonner-toast] > div { width: 100%; max-width: min(360px, -32px + 100vw); }
